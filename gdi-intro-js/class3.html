@@ -17,6 +17,8 @@
 		<link rel="stylesheet" href="reveal/css/reveal.css">
 		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
 		<link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="lib/codemirror/codemirror.css">
+        <link rel="stylesheet" href="lib/handson/handson.css">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
@@ -63,6 +65,13 @@ var aboutMe = {
 			  </code></pre>
 			</section>
             <section>
+                <h3>Let's Develop It</h3>
+                <p>Create an object myRecipe to hold information on your favorite recipe. It should have properties for recipeTitle (a string), servings (a number), and ingredients (an array of strings).</p>
+                <div id="simpleobjectexo" class="gdi-handson" data-initial="" data-check="typeof myRecipe==='object'&&typeof myRecipe.recipeTitle==='string'&&typeof myRecipe.servings==='number'&&typeof myRecipe.ingredients==='object'&&myRecipe.ingredients.length>0" data-hint="assign a value to each of the object's properties; include at least one ingredient">
+                    <button>hands on</button>
+                </div>
+            </section>
+            <section>
 			  <h3>Accessing Objects</h3>
 			  <p>You can retrieve values using "dot notation"</p>
               <pre><code>
@@ -97,6 +106,13 @@ delete aboutMe.gender;
 			  </code></pre>
 			</section>
             <section>
+                <h3>Let's Develop It</h3>
+                <p>Create a function setPerson so that it updates the person firstName and lastName properties. The function then returns the updated person object.</p>
+                <div id="objectpropexo" class="gdi-handson" data-initial="var person = {&#10;    firstName: 'Lisa',&#10;    lastName: 'Smith'&#10;};&#10;function setPerson(first, last) {&#10;    //Your code here&#10;}" data-check="setPerson('Me','Yay')&&setPerson('Me','Yay').firstName==='Me'&&setPerson('Me','Yay').lastName==='Yay'" data-hint="you can use dot or bracket notation to change properties">
+                    <button>hands on</button>
+                </div>
+            </section>
+            <section>
 			  <h3>Arrays of Objects</h3>
 			  <p>Since arrays can hold any data type, they can also hold objects</p>
               <pre><code>
@@ -114,7 +130,7 @@ for (var i = 0; i &lt; myCats.length; i++) {
 			  </code></pre>
 			</section>
             <section>
-			  <h3>Arrays of Objects</h3>
+			  <h3>Objects as Function Arguments</h3>
 			  <p>Just like other data types, objects can be passed into functions:</p>
               <pre><code>
 var lizzieTheCat = {
@@ -133,9 +149,10 @@ describeCat(lizzieTheCat);
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Create an object to hold information on your favorite recipe. It should have properties for recipeTitle (a string), servings (a number), and ingredients (an array of strings).</p>
-                <p>Try displaying some information about your recipe.</p>
-                <p>Bonus: Create a loop to list all the ingredients.</p>
+                <p>Using the person object passed into the function, complete the describePerson below so that it returns a string such as 'Lisa Smith is 30'</p>
+                <div id="objectexo" class="gdi-handson" data-initial="//Sample structure of person object:&#10;var person = {&#10;    firstName: 'Lisa',&#10;    lastName: 'Smith',&#10;    age: 30&#10;};&#10;function describePerson(person) {&#10;    //Your code here&#10;}" data-check="describePerson({firstName:'Awesome',lastName:'Name',age:25})==='Awesome Name is 25'" data-hint="use + to put together the string that the function returns">
+                    <button>hands on</button>
+                </div>
 			</section> 
 
             <section>
@@ -158,7 +175,33 @@ var lizzieTheCat = {
 lizzieTheCat.meow();
 lizzieTheCat.eat('brown mushy stuff');
 			  </code></pre>
-            </section>            
+            </section>
+            <section>
+                <h3>This in Object Methods</h3>
+                <p>When a function is called as a method of an object, the keyword <code>this</code> references the object on which the method is called.</p>
+             <pre><code>
+var lizzieTheCat = {
+  age: 18,
+  furColor: 'grey',
+  logFurColor: function() {
+    console.log('My fur is ' + this.furColor);
+  },
+  getAge: function() {
+    return this.age;
+  },
+  setFurColor: function(color) {
+    this.furColor = color;
+  }
+};
+             </code></pre>
+            </section>
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Complete the rectangle object by adding a function to calculate the area. That method is then called to store the result.</p>
+                <div id="objectfnexo" class="gdi-handson" data-initial="var rectangle = {&#10;    width: 5,&#10;    height: 10,&#10;    area: //Replace this comment with your function&#10;};&#10;//Call the rectangle's area method here to store the result&#10;var result = ;" data-check="rectangle.width=2;rectangle.height=3;result===50&&typeof rectangle.area==='function'&&rectangle.area()===6" data-hint="the area function should return the rectangle's width multiplied by the height; use 'this.width' and 'this.height'">
+                    <button>hands on</button>
+                </div>
+            </section>
             <section>
               <h3>Built-in methods</h3>
               <p>JS provides several built-in objects:</p>
@@ -251,6 +294,14 @@ var imgKitten = document.getElementById('kittenPic');
 			  </code></pre>
             </section>
             <section>
+              <h3>Let's Develop It</h3>
+              <p>Complete the function so that it returns the element with id 'gdiSample1'.</p>
+              <p id="gdiSample1">This is the node the function should return.</p>
+              <div id="elementbyidexo" class="gdi-handson" data-initial="function getSampleElement() {&#10;    //Your code here to return the gdiSample1 element&#10;}&#10;//Logs the output of your function to the console so you can see what it does:&#10;console.log(getSampleElement());" data-check="getSampleElement()===document.getElementById('gdiSample1')" data-hint="return the results of getElementById">
+                <button>hands on</button>
+              </div>
+            </section>
+            <section>
               <h3>DOM Access: By Tag Name</h3>
               <p>You can certain types of HTML elements using this method:</p>
               <pre><code>
@@ -321,6 +372,14 @@ var imgKitten = document.getElementById('kittenPic');
 var oldSrc = imgKitten.getAttribute('src');
 imgKitten.setAttribute('src', 'http://placekitten.com/100/500');
 			  </code></pre>
+            </section>
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Complete the function so that it updates the sample link's href attribute with the url argument. The link has an id of 'gdiSampleLink'.</p>
+                <p><a id="gdiSampleLink" href="https://www.girldevelopit.com/" target="_blank">Sample Link</a></p>
+                <div id="elementattrexo" class="gdi-handson" data-initial="function updateSampleLink(url) {&#10;    //Your code here to set href attribute&#10;}" data-check="updateSampleLink('http://www.google.com/');'http://www.google.com/'===document.getElementById('gdiSampleLink').href" data-hint="Use dot notation ( .href ) or setAttribute">
+                    <button>hands on</button>
+                </div>
             </section>
             <section>
               <h3>DOM Nodes: Styles</h3>
@@ -433,8 +492,10 @@ pageNode.appendChild(newParagraph);
       </footer>
     </div><!-- Close .reveal -->
 
-
-		<script src="reveal/lib/js/head.min.js"></script>
+        <script src="lib/codemirror/codemirror.min.js"></script>
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/handson/handson.js"></script>
+        <script src="reveal/lib/js/head.min.js"></script>
 		<script src="reveal/js/reveal.min.js"></script>
 
 		<script>
