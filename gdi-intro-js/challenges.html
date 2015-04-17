@@ -45,7 +45,18 @@
 		<div id="superminlistexo" class="gdi-handson" data-initial="function smallestDiff (numArray) {&#10;&#10;}" data-check="smallestDiff([4, 12, 3.99, 2, 1.8, 1.91])===4-3.99" data-hint="this one is all sorts of hard. You can use a double loop or leverage the sort() function of an array.">
 			<button>hands on</button>
 		</div>
-
+		<h1>Objects</h1>
+		<h2>1. Recap with Reflexion</h2>
+		<p>Write an object called myEmployee, with the firstName (string), lastName (string), position (string), and monthlySalary (number) attributes. myEmployee also has an attribute getYearlySalary, which is a function returning the yearly salary for the employee. Write another object called myCompany, with an employees attribute (array of employee objects), and a getYearlySalaryCost attribute, which is a function returning the total yearly salary cost for the company. Bonus: use the getYearlySalary function in getYearlySalaryCost.</p>
+		<div id="superobjexo" class="gdi-handson" data-initial="var myEmployee  = {&#10;&#10;}&#10;&#10;var myCompany  = {&#10;&#10;}" data-check="myEmployee.monthlySalary=2;myCompany.employees=[myEmployee, myEmployee];myEmployee.getYearlySalary()===24&&myCompany.getYearlySalaryCost()===48" data-hint="remember the keyword this when a function is inside an object, this refers to the object. For myCompany's getYearlySalaryCost, you will need to use a for loop to go through every employee object and increment a total variable (number) with the result of each employee's getYearlySalary call.">
+			<button>hands on</button>
+		</div>
+		<h1>Events</h1>
+		<h2>1. Recap</h2>
+		<p>The hands on exercise box below has an id of 'exerciseBox'. Attach an onfocus event to it that will change the id of the box to 'focusedBox' when the box gets the focus.</p>
+		<div id="exerciseBox" class="gdi-handson" data-initial="" data-check="$('#exerciseBox').trigger('onfocus');$('#focusedBox').length===1" data-hint="first grab the element by id, then use onfocus as an attribute of the event, holding a function that will change the id of the element.">
+			<button>hands on</button>
+		</div>
 		<script src="lib/codemirror/codemirror.min.js"></script>
 		<script src="lib/jquery.min.js"></script>
 		<script src="lib/handson/handson.js"></script>
