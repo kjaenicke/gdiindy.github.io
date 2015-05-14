@@ -79,14 +79,14 @@
       <section>
         <section>
           <h2>Attribute Selectors</h2>
-          <p>Not just classes and ids any more! <a href="http://codepen.io/team/css-tricks/pen/OPobRY">CSS Tricks Example</a></p>
+          <p>Not just classes and ids any more! <!-- <a href="http://codepen.io/team/css-tricks/pen/OPobRY">CSS Tricks Example</a> --></p>
           <ul>
-            <li class="fragment"><strong>E[foo^="bar"]</strong> <br/>an element whose "foo" attribute value begins exactly with the string "bar"</li>
-            <li class="fragment"><strong>E[foo$="bar"]</strong> <br/>an element whose "foo" attribute value ends exactly with the string "bar"</li>
-            <li class="fragment"><strong>E[foo*="bar"]</strong> <br/>an element whose "foo" attribute value contains the substring "bar"</li>
+            <li class="fragment"><strong>E[attribute^="selector"]</strong> <a href="http://codepen.io/lindsaylee/pen/oXxomW" target="_blank">Example</a> <br/>an element whose attribute value begins exactly with a specified value</li>
+            <li class="fragment"><strong>E[attribute$="selector"]</strong> <a href="http://codepen.io/lindsaylee/pen/QbNORP" target="_blank">Example</a> <br/>an element whose attribute value ends exactly with a specified value</li>
+            <li class="fragment"><strong>E[attribute*="selector"]</strong> <a href="http://codepen.io/lindsaylee/pen/bdpaGz?editors=110" target="_blank">Example</a> <br/>an element whose attribute value contains the specified value"</li>
           </ul>
         </section>
-        <section class="attribute-selectors">
+<!--         <section class="attribute-selectors">
           <h2>Attribute Selectors</h2>
           <pre><code>div[foo^="bar"] {
   color: red;
@@ -102,8 +102,8 @@ div[foo*="bar"] {
             <div foo="lumbar">foo="lumbar"</div>
             <div foo="embark">foo="embark"</div>
           </article>
-        </section>
-        <section class="attribute-selectors">
+        </section> -->
+<!--         <section class="attribute-selectors">
           <h2>Attribute Selectors</h2>
           <p>People don't actually use foo do they?</p>
           <pre><code>a[href^="http://"] {
@@ -116,7 +116,7 @@ img[src$=".jpg"] {
             <a href="http://www.girldevelopit.com" target="_blank">http://www.girldevelopit.com</a>
             <img src="images/dinosaur.jpg" title="dinosaur" alt="" style="float:right;"/>
           </article>
-        </section>
+        </section> -->
       </section>
 
       <!-- Nth child-->
@@ -140,9 +140,10 @@ element:nth-child(an + b) { style properties }
             <li><strong>4n</strong> - selects every fourth element</li>
             <li><strong>even</strong> - selects even elements</li>
             <li><strong>odd</strong> - selects odd elements</li>
-          </ul>
+          </ul><br/><br/>
+          <p><a href="http://codepen.io/lindsaylee/pen/WvwdrB?editors=110" target="_blank">Examples to try</a></p>
         </section>
-        <section class="nth-child-table">
+  <!--       <section class="nth-child-table">
           <h2>:nth-child</h2>
           <pre><code>tbody tr:nth-child(an + b) { backround-color: red; }</code></pre>
           <p>
@@ -191,7 +192,7 @@ element:nth-child(an + b) { style properties }
             </tbody>
           </table>
           <a href="http://css-tricks.com/how-nth-child-works/" target="_blank">reference</a>
-        </section>
+        </section> -->
       </section>
 
       <!-- Pseudo form selectors-->
@@ -212,6 +213,7 @@ element:nth-child(an + b) { style properties }
               <strong>E:not</strong><br/> an element that does not match simple selector
             </li>
           </ul>
+          <p class="fragment"><a href="http://codepen.io/lindsaylee/pen/vOGpxr?editors=110" target="_blank">Examples to try</a></p>
         </section>
         <section class="pseudo-enabled">
           <h2>:enabled &amp; :disabled</h2>
@@ -346,7 +348,7 @@ input:checked + label {
           <div class="sliders" style="width:55%;">
             <p>
               <span class="border-radius-value">20</span>px on all corners
-              <input type="range" min="0" max="100" value="20">
+              <!-- <input type="range" min="0" max="100" value="20"> -->
             </p>
           </div>
           <div class="example" id="example1">
@@ -360,11 +362,11 @@ input:checked + label {
           <div class="sliders" style="width:75%;">
             <p>
               <span class="border-radius-value">10</span>px on top left &amp; bottom right
-              <input type="range" min="0" max="100" value="10">
+             <!--  <input type="range" min="0" max="100" value="10"> -->
             </p>
             <p>
               <span class="border-radius-value">40</span>px on top right &amp; bottom left
-              <input type="range" min="0" max="100" value="40">
+              <!-- <input type="range" min="0" max="100" value="40"> -->
             </p>
           </div>
           <div class="example" id="example2">
@@ -376,25 +378,26 @@ input:checked + label {
           <div class="sliders" style="width: 50%;">
             <p>
               <span class="border-radius-value">10</span>px on top left
-              <input type="range" min="0" max="100" value="10">
+              <!-- <input type="range" min="0" max="100" value="10"> -->
             </p>
             <p>
               <span class="border-radius-value">20</span>px top right
-              <input type="range" min="0" max="100" value="20">
+            <!--   <input type="range" min="0" max="100" value="20"> -->
             </p>
             <p>
               <span class="border-radius-value">40</span>px bottom right
-              <input type="range" min="0" max="100" value="40">
+              <!-- <input type="range" min="0" max="100" value="40"> -->
             </p>
             <p>
               <span class="border-radius-value">80</span>px bottom left
-              <input type="range" min="0" max="100" value="80">
+              <!-- <input type="range" min="0" max="100" value="80"> -->
             </p>
           </div>
           <div class="example" id="example3">
           </div>
+          <a href="http://codepen.io/lindsaylee/pen/EjKooX?editors=110" target="_blank">Let's See All This in Action</a>
         </section>
-        <section>
+        <!-- <section>
           <h2>border-radius</h2>
           <pre><code>#example4, #example5 {
   border-radius: 50%;
@@ -407,7 +410,7 @@ input:checked + label {
             <div class="example" id="example5">
             </div>
           </article>
-        </section>
+        </section> -->
         <section>
           <h2>Border-Radius</h2>
           <p>Remember vendor prefixes? This is where we would use one</p>
@@ -509,6 +512,8 @@ input:checked + label {
             <li>0 - not visible</li>
             <li>1 - fully visible</li>
           </ul>
+          <br/><br/>
+          <a href="http://codepen.io/lindsaylee/pen/mJPpKv?editors=110" target="_blank">Let's Try It</a>
         </section>
       </section>
 
@@ -526,10 +531,10 @@ input:checked + label {
           </code></pre>
           <p>
             <label>offset-x:</label>
-            <input type="range" min="0" max="10" value="1">
+            <input type="range" min="0" max="50" value="1">
 
             <label>offset-y:</label>
-            <input type="range" min="0" max="10" value="1">
+            <input type="range" min="0" max="50" value="1">
           </p>
           <div></div>
         </section>
@@ -544,10 +549,10 @@ input:checked + label {
             <input type="checkbox" >
 
             <label>blur:</label>
-            <input type="range" min="0" max="10" value="1">
+            <input type="range" min="0" max="50" value="1">
 
             <label>spread:</label>
-            <input type="range" min="0" max="10" value="1">
+            <input type="range" min="0" max="50" value="1">
           </p>
           <div></div>
         </section>
@@ -568,7 +573,8 @@ text-shadow: 1px 1px 10px red,
 }</code></pre>
         <article class="text-shadow">
           <div class="example1">lorem ipsum</div>
-          <div class="example2">lorem ipsum</div>
+          <div class="example2">lorem ipsum</div><br><br>
+          <a href="http://css3gen.com/text-shadow/" target="_blank">Try it yourself!</a>
         </article>
       </section>
 
@@ -660,7 +666,7 @@ background-image: linear-gradient(bottom right, red, white);
         </section>
         <section>
           <h2>gradients</h2>
-          <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Gradient Editor</a>
+          <a href="http://www.css3factory.com/linear-gradients/" target="_blank">Gradient Editor</a>
         </section>
       </section>
 
@@ -681,7 +687,8 @@ background-image: url('../images/html5-features.png'),
                 url('../images/sky.jpg');
 }</code></pre>
         <div class="example">
-        </div>
+        </div><br>
+        <a href="http://codepen.io/lindsaylee/pen/GJZyab?editors=110" target="_blank">Let's Try It!</a>
       </section>
 
       <!-- Caution-->
