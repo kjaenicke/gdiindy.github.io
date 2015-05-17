@@ -734,16 +734,63 @@ background-image: url('../images/html5-features.png'),
           <p class="fragment">Create some awesome effects without any JavaScript</p>
         </section>
         <section>
-          <h2>Transition Triggers</h2>
+          <h2>How to Use Transitions</h2>
+          <p>To create a transition effect, you must specify two things:</p>
           <ul>
-            <li>Hover</li>
-            <li>Mouse click</li>
-            <li>Focus state</li>
-            <li>Active state</li>
-            <li>Changes to the element</li>
+            <li>The CSS property you want to add an effect to</li>
+            <li>The duration of the effect</li>
           </ul>
         </section>
         <section>
+          <h2>Transition Example</h2>
+          <p>Transition the width of a div on :hover</p>
+          <pre><code>div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 1s;
+}
+
+div:hover {
+    width: 300px;
+}</code></pre>
+<a href="http://codepen.io/lindsaylee/pen/yNJgJq?editors=110" target="_blank">View on CodePen</a>
+        </section>
+        <section>
+          <h2>Transition Example</h2>
+          <p>Transition the width and background color of a div on :hover</p>
+          <pre><code>div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 1s, background 1s;
+}
+
+div:hover {
+    width: 300px;
+    background:purple;
+}</code></pre>
+<a href="http://codepen.io/lindsaylee/pen/mJERrr?editors=110" target="_blank">View on CodePen</a>
+        </section>
+        <section>
+          <h2>Transition Example</h2>
+          <p>Transition the color of a link on :hover</p>
+          <pre><code>a {
+    color:purple;
+    transition: color 1s;
+}
+
+a:hover {
+    color:pink;
+}</code></pre>
+<a href="http://codepen.io/lindsaylee/pen/mJERrr?editors=110" target="_blank">View on CodePen</a>
+        </section>
+        <section>
+          <h2>Let's Develop It</h2>
+          <p>On CodePen, add a :hover effect to the link and change the color with a transition.</p>
+<a href="http://codepen.io/lindsaylee/pen/mJERrr?editors=110" target="_blank">Edit on CodePen</a>
+        </section>
+        <!-- <section>
           <h2>Transition Properties</h2>
           <ul>
             <li>transition-property</li>
@@ -751,8 +798,8 @@ background-image: url('../images/html5-features.png'),
             <li>transition-delay</li>
             <li>transition-timing-function</li>
           </ul>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <h2>transition-property</h2>
           <p>the names of CSS properties that should be transitioned</p>
           <pre><code>
@@ -762,8 +809,8 @@ background-image: url('../images/html5-features.png'),
           <pre><code>
 .example2 { transition-property: all; }
           </code></pre>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <h2>transition-property</h2>
           <p>
             <a href="http://leaverou.github.com/animatable/" target="_blank">animatable examples</a>
@@ -771,8 +818,8 @@ background-image: url('../images/html5-features.png'),
           <p>
             <a href="http://www.w3.org/TR/css3-transitions/#animatable-css" target="_blank">full list of supported properties</a>
           </p>
-        </section>
-        <section class="transition-duration">
+        </section> -->
+        <!-- <section class="transition-duration">
           <h2>transition-duration</h2>
           <p>the number of seconds or milliseconds a transition animation should take to complete</p>
           <pre><code>
@@ -786,8 +833,8 @@ background-image: url('../images/html5-features.png'),
           </div>
           <div class="example">
           </div>
-        </section>
-        <section class="transition-delay">
+        </section> -->
+        <!-- <section class="transition-delay">
           <h2>transition-delay</h2>
           <p>delay transitions from the moment a trigger happens</p>
           <pre><code>.example1 { transition-delay: 0s; }
@@ -800,8 +847,8 @@ background-image: url('../images/html5-features.png'),
             <div class="example2">1</div>
             <div class="example1">0</div>
           </article>
-        </section>
-        <section class="transition-timing-function">
+        </section> -->
+        <!-- <section class="transition-timing-function">
           <h2>transition-timing-function</h2>
           <p>determines how intermediate values are calculated</p>
           <pre><code>.example { transition-timing-function: ease; }</code></pre>
@@ -814,7 +861,7 @@ background-image: url('../images/html5-features.png'),
             <div class="cubic-bezier">cubic-bezier</div>
           </article>
           <a href="http://cubic-bezier.com/" target="_blank">cubic-bezier</a>
-        </section>
+        </section> -->
       </section>
 
       <!-- Transformations-->
