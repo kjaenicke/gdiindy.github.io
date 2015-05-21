@@ -46,8 +46,18 @@
         <h4>Class 4</h4>
       </section>
 
-      <!-- Welcome-->
       <section>
+        <h3>Welcome!</h3>
+        <div class="left-align">
+          <p>Thanks for taking our class!</p>
+          <a href="http://www.meetup.com/Girl-Develop-It-Indianapolis/events/220859242/" target="_blank">Leave us feedback and comments on Meetup!</a>
+          <a href="" target="_blank">Take our class survey</a>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Welcome-->
+      <!-- <section>
         <h3>Welcome!</h3>
         <div class="left-align">
           <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
@@ -59,19 +69,129 @@
             <li>Have fun</li>
           </ul>
         </div>
+      </section> -->
+
+      <!-- Responsive Design -->
+      <section>
+        <section>
+          <h2>Responsive Design</h2>
+          <p>Design by thinking of the structure of your website, and how different elements fit into the structure.</p>
+        </section>
+        <section>
+          <h2>Responsive Design: Desktop</h2>
+          <p class="yellow">Desktop View</p>
+          <img src="images/media-queries-desktop.png" style="height:500px" alt=""/>
+        </section>
+        <section>
+          <h2>Responsive Design: Tablet</h2>
+          <p class="yellow">Tablet View</p>
+          <img src="images/media-queries-tablet.png" style="height:500px" alt=""/>
+        </section>
+        <section>
+          <h2>Responsive Design: Mobile</h2>
+          <p class="yellow">Mobile View</p>
+          <img src="images/media-queries-phone.png" style="height:500px" alt=""/>
+        </section>
+        <section>
+          <h2>Responsive Design: Examples</h2>
+          <p>Open these links and resize the browser window to see how they adapt to the new screen size!</p>
+          <a href="http://mediaqueri.es/" target="_blank">mediaqueri.es</a><br/>
+          <a href="http://jessicahische.is" target="_blank">Jessica Hische</a><br/>
+          <a href="http://www.cnn.com/" target="_blank">CNN</a><br/>
+          <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a><br/>
+        </section>
+        <section>
+          <h2>Responsive Design: The Inventor</h2>
+          <p>Ethan Marcotte coined the term "responsive web design" in 2010</p>
+          <img src="http://alistapart.com/d/_made/pix/authors/uploads/photo_116070_120_120_c1.png"/><br/>
+          <p><a href="http://alistapart.com/article/responsive-web-design" target="_blank">"Responsive Web Design"</a> by Ethan Marcotte</p>
+          <p>It’s not a single piece of technology, but rather, a set of techniques and ideas that form a whole.</p>
+        </section>
+        <section>
+          <h2>Responsive Design: The History</h2>
+          <p>People expected to be able to browse the web on their phones just as easily as they browse the web on a desktop computer</p><br>
+          <p>Designers and developers started creating mobile versions of their websites - which meant two entire versions!</p><br>
+          <p>This wasn't sustainable in the long run, so media queries and fluid grids came next</p>
+        </section>
+      </section>
+
+      <!-- Responsive design + media queries -->
+      <section>
+        <section>
+          <h2>Responsive Design and Media Queries</h2>
+          <p>Media queries allow you to gather data about the site visitor and use it to conditionally apply CSS styles</p><br/>
+          <p>Adjust container sizes, font sizes, images, and any CSS you want, to allow users to view your site on any screen size</p><br/>
+        </section>
+        <section>
+          <h2>Media Query: Example</h2>
+          <pre><code>section {
+  padding:10px;
+  width:900px;
+}
+p { font-size:12px; }
+
+/* These styles applied to screen widths less than 600px */
+@media screen and (max-width: 600px){
+  section {
+    padding:25px;
+    width: 550px;
+  }
+  p { font-size: 18px; }
+}</code></pre>
+
+<a href="http://codepen.io/lindsaylee/pen/GJjNPR?editors=110" target="_blank">View Another Example in CodePen &rarr;</a>
+        </section>
+
+        <section>
+          <h2>Let's Develop It</h2>
+          <p>Check out the CodePen link below and add a few styles to the media query</p><br>
+          <p>Try changing the background-color and padding when the screen is less than 480px.</p><br>
+          <p>Look at the h1, h2, and p tags, and try adjusting the font-size</p><br>
+
+<a href="http://codepen.io/lindsaylee/pen/vOXyvq?editors=110" target="_blank">View Exercise in CodePen &rarr;</a>
+        </section>
+<!--
+        <section>
+          <h2>Responsive Design and Media Queries</h2>
+          <p class="yellow">Mobile example</p>
+          <pre><code contenteditable>/** Mobile view **/
+@media screen and (max-width: 480px){
+  #famous article.woman {
+    float: none;
+    margin: 5px auto;
+    padding: 2%;
+    width: 80%
+  }
+}</code></pre>
+          <p class="fragment">In mobile view, we don't want the bios to float</p>
+        </section> -->
       </section>
 
       <!-- Media Queries -->
       <section>
         <section>
-          <h2>Media Queries</h2>
+          <h2>Media Queries: A Step Further</h2>
+          <p>Sometimes you have multiple columns on desktop, but want to collapse them on mobile screens</p><br>
+          <p>There's also times you'll want to hide items on mobile that only show on desktop</p><br>
+<a href="http://codepen.io/lindsaylee/pen/MwjbRO?editors=110" target="_blank">Media queries to the rescue &rarr;</a>
+        </section>
+
+        <section>
+          <h2>Let's Develop It</h2>
+          <p>Make the two columns collapse on smaller screens so the content is more readible</p><br>
+          <p>Try hiding the top image so the content is simpler on mobile</p><br>
+          <p><b>Extra credit:</b> Make the font sizes larger on mobile so people can read the content easier</p>
+<a href="http://codepen.io/lindsaylee/pen/MwjbRO?editors=110" target="_blank">View Exercise in CodePen &rarr;</a>
+        </section>
+        <!-- <section>
+          <h2>Media Queries: A Step Further</h2>
           <ul>
             <li>Conditional style sheets</li>
             <li>Changing specific CSS styles on different browsers based on width, device-pixel-ratio, and orientation</li>
             <li>Called via a meta tag</li>
           </ul>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <h2>Media Queries</h2>
           <p>A media type and at least one expression that limits the style sheets' scope by using media features, such as width, height, and color</p>
         </section>
@@ -88,79 +208,48 @@ background-color: red;
 background-color: blue;
 }</code></pre>
           <pre class="fragment"><code>&lt;meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"&gt;</code></pre>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <h2>Media Queries</h2>
           <p>Frequently used in responsive web design</p>
           <p><a href="http://mediaqueri.es" target="_blank">http://mediaqueri.es</a></p>
           <p><a href="http://buildresponsively.com/" target="_blank">Example: Build Responsively</a></p>
-        </section>
+        </section> -->
       </section>
 
-      <!-- Responsive Design -->
-      <section>
-        <section>
-          <h2>Responsive Design</h2>
-          <p>Design by thinking of the structure of your website, and how different elements fit into the structure.</p>
-        </section>
-        <section>
-          <h2>Responsive Design</h2>
-          <p class="yellow">Desktop View</p>
-          <img src="images/media-queries-desktop.png" style="height:500px" alt=""/>
-        </section>
-        <section>
-          <h2>Responsive Design</h2>
-          <p class="yellow">Tablet View</p>
-          <img src="images/media-queries-tablet.png" style="height:500px" alt=""/>
-        </section>
-        <section>
-          <h2>Responsive Design</h2>
-          <p class="yellow">Mobile View</p>
-          <img src="images/media-queries-phone.png" style="height:500px" alt=""/>
-        </section>
-      </section>
 
-      <!-- Responsive design + media queries -->
+      <!-- Media Queries -->
       <section>
         <section>
-          <h2>Responsive Design and Media Queries</h2>
-          <p>Most of our styling will stay the same</p>
-          <p>Colors, padding, etc.</p>
-          <p>Only change what needs to for each view</p>
+          <h2>Media Queries: Getting Crazier</h2>
+          <p>Let's take a look at a 3-column layout for The Doughnut Shack</p><br>
+          <p>You'll notice the navigation and sidebars become full-width on mobile screens</p><br>
+<a href="http://codepen.io/lindsaylee/pen/WvGZKx?editors=110" target="_blank">View Example on CodePen &rarr;</a>
         </section>
+
         <section>
-          <h2>Responsive Design and Media Queries</h2>
-          <p class="yellow">Tablet example</p>
-          <pre><code contenteditable>/** Tablet view **/
-@media screen and (max-width: 960px){
-  h1 {
-    font-size: 1.1em;
-    line-height: 40px;
-  }
-  header nav li{
-    line-height: 40px;
-  }
-}</code></pre>
-          <p class="fragment">In tablet view, we don't need the header to be so big</p>
+          <h2>Media Queries Tips</h2>
+          <p>Look at your content and how it flows to decide when to create the media query breakpoints</p><br>
+          <p>Since there's dozens of phone, tablet, and computer screen sizes, designing a version for every screen size doesn't make sense - design for your content's needs</p><br>
+<a href="http://codepen.io/lindsaylee/pen/WvGZKx?editors=110" target="_blank">View Example on CodePen &rarr;</a>
         </section>
+
         <section>
-          <h2>Responsive Design and Media Queries</h2>
-          <p class="yellow">Mobile example</p>
-          <pre><code contenteditable>/** Mobile view **/
-@media screen and (max-width: 480px){
-  #famous article.woman {
-    float: none;
-    margin: 5px auto;
-    padding: 2%;
-    width: 80%
-  }
-}</code></pre>
-          <p class="fragment">In mobile view, we don't want the bios to float</p>
+          <h2>Let's Develop It</h2>
+          <p>We will be editing a layout similar to The Doughnut Shack</p><br>
+          <p>Look at the columns and make them collapse on smaller screens</p><br>
+          <p>If you want, adjust the padding or margin to give the content more breathing space</p><br>
+          <p>Adjust the font-size to make content more readible</p><br>
+          <p>Extra credit: Add a border-radius to images or :hover effect to links</p><br>
+
+<a href="http://codepen.io/lindsaylee/pen/QbKqXp?editors=110" target="_blank">View Example on CodePen &rarr;</a>
         </section>
+
+
       </section>
 
       <!-- Let's Develop It-->
-      <section>
+      <!-- <section>
         <section>
           <h2>Let's Develop It</h2>
           <p>Enhance our Women in Computing web site to use HTML5 &amp; CSS3</p>
@@ -175,10 +264,10 @@ background-color: blue;
             <li>Useful tutorial <a href="http://webdesignerwall.com/tutorials/responsive-design-in-3-steps" target="_blank">Responsive Design in 3 Easy Steps</a></li>
           </ul>
         </section>
-      </section>
+      </section> -->
 
       <!-- Tools and Deployment -->
-      <section>
+      <!-- <section>
         <section>
           <h2>Tools &amp; Deployment</h2>
           <p class="yellow">Remember that HTML5 is still new</p>
@@ -259,10 +348,10 @@ background-color: blue;
             <li>It generates for you a clean customizable template with just what you need to start!</li>
           </ul>
         </section>
-      </section>
+      </section> -->
 
       <!-- Let's Develop It-->
-      <section>
+      <!-- <section>
         <section>
           <h2>Let's Develop It</h2>
           <ul>
@@ -277,7 +366,7 @@ background-color: blue;
             </li>
           </ul>
         </section>
-      </section>
+      </section> -->
 
       <!-- Questions? -->
       <section>
