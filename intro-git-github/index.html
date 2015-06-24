@@ -353,16 +353,21 @@ git revert [HASH]
           <h3>Nobody's Perfect</h3>
           <div class="box"><h4>Remove a file from staging</h4>
                     <p>Create new file my_new_file.txt</p></div>
-            <pre style="height: 120px; overflow: hidden;"><code contenteditable class ="command-line">
+            <pre style="height: 180px; overflow: hidden;"><code contenteditable class ="command-line">
+touch my_new_file.txt
+git status
 git add my_new_file.txt
+git status
 git reset my_new_file.txt
+git status
             </code></pre>
         </section>
         <section>
           <h3>Nobody's Perfect</h3>
           <div class="box"><h4>Delete a file</h4>
                     <p>Create new file my_other_file.txt</p>
-          <pre style="height: 80px; overflow: hidden;"><code contenteditable class ="command-line">
+          <pre style="height: 100px; overflow: hidden;"><code contenteditable class ="command-line">
+touch my_other_file.txt
 git add my_other_file.txt
           </code></pre>
           </div>
@@ -390,7 +395,8 @@ git rm my_other_file.txt
 git checkout -b version2
           </code></pre>
           <p class="copy--small box--small">Add new lines to hello_world.txt</p>
-          <pre style="height: 100px; overflow: hidden"><code contenteditable class ="command-line">
+          <pre style="height: 120px; overflow: hidden"><code contenteditable class ="command-line">
+git status
 git add hello_world.txt
 git commit -m "Adding changes to version 2"
           </code></pre>
@@ -500,7 +506,7 @@ git pull origin master
           <div class="box"><h4>Push to GitHub Repo</h4>
                     <p class="copy--small box--small">Edit the README file
                     <pre><code contenteditable class ="command-line">
-          git add README
+          git add README.md
           git commit -m "Updating readme file"
           git push origin master
                     </code></pre>
@@ -518,11 +524,6 @@ git commit -m "My latest commit"
 # Pull changes other people have made
 git pull origin master
 
-# Fix any conflicts (see merge conflicts above) and commit
-git commit -m "Fixing merging conflicts"
-
-# push local changes to GitHub
-git push origin master
           </code></pre>
         </section>
       </section>
