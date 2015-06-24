@@ -47,29 +47,25 @@
         </section>
 
         <!-- ABOUT YOU -->
-<!--         <section>
+        <section>
           <h3>About Me</h3>
-          <div class="box--small left center-align" style="width: 33.33%; padding-top: 70px;"><img class="img--bare" style="max-width: 90%" src="images/dte-logo.png"  alt="DTE Energy" title="DTE Energy"></div>
-          <div class="box--small left center-align" style="max-width: 33.33%"><img class="img--bare" style="max-width: 70%" src="images/HeadShotv2Small.jpg" alt="Chris DeMars" title="Chris DeMars"></div>
-          <div class="box--small right center-align" style="width: 33.33%"><img class="img--bare" style="max-width: 90%" src="images/bg-logo.png" alt="Baker College" title="Baker College"></div>
-          <div style="clear: both;"><a href="http://thischriscreative.com">http://thischriscreative.com</a>
-                    <a href="htto://github.com/chrisdemars">http://github.com/chrisdemars</a>
-                    <p>cdemars86@gmail.com</p></div>
-        </section> -->
+          <center><div class="box--small center-align" style="max-width: 33.33%"><img class="img--bare" style="max-width: 70%" src="images/HeadShotv2Small.jpg"></div></center>
+          <div style="clear: both;">Lindsay Siovaila<br>
+                    <p>lindsay@girldevelopit.com</p></div>
+        </section>
 
         <section>
-          <h3>About the Team!</h3>
+          <h3>Nice to Meet You</h3>
           <ul class="list--tall box--small copy--small">
             <li>What's your <span class="green">name</span>?</li>
             <li>What do you <span class="blue">hope to get</span> out of the class?</li>
-            <li>Who is your <span class="red">favorite horror movie character</span>?</li>
           </ul>
         </section>
 
         <section>
           <h3>What We'll Cover Today</h3>
           <ul class="list--xtall box--small copy--small">
-            <li class ="fragment">What is version control and why should we care?</li>
+            <li class ="fragment">What is version control?</li>
             <li class ="fragment">Basics of git -- the essential commands.</li>
             <li class ="fragment">"Gitting" social with GitHub.</li>
           </ul>
@@ -101,13 +97,13 @@
           <div class="box"><img src = "images/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
           </h3></div>
         </section>
-        <section>
+        <!-- <section>
           <h3>Brief history of Version Control</h3>
           <p class="box copy--small"><span class ="green">1990s</span> -- CVS (Concurrent Version Systems)</p>
           <p class="box copy--small"><span class ="green">2000s</span> -- SVN (Apache Subversion)</p>
           <p class="box copy--small"><span class ="green">2005</span> -- Git (well, Git)</p>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <aside class="notes">
             Touch on local versioning.
           </aside>
@@ -122,15 +118,15 @@
             <p class="box--small copy--small">Examples: Git, Mercurial</p>
             <p class="box--small copy--small">Each client (person) has a local repository, which they can then reconcile with the main server.</p>
           </div>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <h3>Version Control Distribution</h3>
           <a href = "http://redmonk.com/sogrady/2012/11/05/dvcs-2012/" target="_blank" alt ="Centralized vs Decentralized Version Control: 2010 vs 2012"><img src = "images/subversion-share-2012.png" alt ="Version control share between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
         </section>
         <section>
           <h4>Version Control Distribution Change</h4>
           <a href = "http://redmonk.com/sogrady/2012/11/05/dvcs-2012/" target="_blank" alt ="Centralized vs Decentralized Version Control: 2010 vs 2012"><img src = "images/subversion-change-2010-2012.png" alt ="Version control distribution share between 2010 and 2012 between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
-        </section>
+        </section> -->
       </section>
 
       <!-- Git is not GitHub -->
@@ -144,7 +140,6 @@
         <p class="box copy--small">The Goals of Git Design include:</p>
         <ul class="list--tall copy--xsmall">
           <li class="fragment">Fast -- add to your team and code base quickly.</li>
-          <li class="fragment">Distributed (see slide above).</li>
           <li class="fragment">Each commit has a corresponding hash (track changes from everyone).</li>
           <li class="fragment">Everyone has a local copy of the history.</li>
         </ul>
@@ -152,15 +147,29 @@
 
       <!-- Installation and Setup-->
       <section>
-        <section>
+        <section style="text-align:left;">
+          <h3>Installation and Setup (~15 min)</h3>
+          Step 1:
+          <a href = "https://github.com/join" alt ="Create a GitHub Account" target ="_blank">Create a GitHub Account
+          </a><br/><br/>
+
+          Step 2:
+          <a href = "https://github.com/join" alt ="Create a GitHub Account" target ="_blank">Install Git
+          </a><br/><br/>
+
+          Step 3: <a href="https://help.github.com/articles/generating-ssh-keys/" target ="_blank">Generate SSH keys; link to GitHub account</a><br/><br/>
+
+          Step 4: <a href="https://help.github.com/articles/generating-ssh-keys/#step-5-test-the-connection" target ="_blank">Test the connection</a>
+        </section>
+        <!-- <section>
           <h3>Installation and Setup</h3>
           <a href = "http://git-scm.com/downloads" alt ="Download latest version of Git" target ="_blank">
-            <span>Install git</span><br/>
+            <span>Step 1: Install git</span><br/>
             <img src = "images/newGitRelease.jpg" alt = "Download latest version of Git"/><br/>
             <span>http://git-scm.com/downloads</span>
           </a>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <aside class="notes">
             This is one way of setting up git but we won't be using this way today.
           </aside>
@@ -178,8 +187,8 @@ $ ssh-keygen -t rsa -C "your_email@example.com"
 Enter passphrase (empty for no passphrase): [Type a passphrase]
 # Enter same passphrase again: [Type passphrase again]
           </code></pre>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <h3>Installation and Setup</h3>
           <p>Get SSH Key</p>
           <pre><code contenteditable class ="command-line">
@@ -188,13 +197,13 @@ Your identification has been saved in /Users/you/.ssh/id_rsa.
 # The key fingerprint is:
 # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
           </code></pre>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <h3>Installation and Setup</h3>
           <p>Add SSH Key to Github</p>
           <img src = "images/add-ssh.png" alt ="Steps to add SSH key to github account"/>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
           <h3>Installation and Setup</h3>
           <p>Setup name and email in gitconfig</p>
           <pre style="height: 100px; overflow: hidden;"><code contenteditable class ="command-line">
@@ -208,23 +217,21 @@ $ git config --global user.email "your_email@example.com"
           <pre style="height: 80px; overflow: hidden;"><code contenteditable class ="command-line">
 $ git config --list
           </code></pre>
-        </section>
+        </section> -->
       </section>
 
       <!-- First commands-->
       <section>
-        <section>
+        <section style="text-align:left;">
           <h3>Your first Local Repository</h3>
           <p class="copy--small box--small">Go to home directory</p>
-          <pre style="height: 120px; overflow: hidden;"><code contenteditable class ="command-line">
+          <pre style="height: 90px; overflow: hidden;"><code contenteditable class ="command-line">
 cd ~/
-OR
-cd Users\username
           </code></pre>
-          <p class="copy--small box--small">Create a "working directory"</p>
+          <p class="copy--small box--small">Create a "working directory" (folder) and enter it</p>
           <pre style="height: 100px; overflow: hidden;"><code contenteditable class ="command-line">
-mkdir my-first-repo
-cd my-first-repo
+mkdir my-git-project
+cd my-git-project
           </code></pre>
           <p class="copy--small box--small">Initialize repository with Git</p>
           <pre style="height: 100px; overflow: hidden;"><code contenteditable class ="command-line">
@@ -233,7 +240,7 @@ git status
           </code></pre>
         </section>
         <section>
-          <h3>Git Status ALL THE THINGS!!!!</h3>
+          <h3>Git Status is your best friend</h3>
         </section>
         <section>
           <h3>Add files</h3>
@@ -258,15 +265,11 @@ git status
           <pre style="height: 80px; overflow: hidden;"><code contenteditable class ="command-line">
 git status
           </code></pre>
-          <p class="copy--small box--small">Stage and commit the change.</p>
+          <p class="copy--small box--small">Stage (git add) and commit (git commit) the change.</p>
           <pre style="height: 100px; overflow: hidden;"><code contenteditable class ="command-line">
 git add hello_world.txt
 git commit -m "First commit. Added hello world to repository."
           </code></pre>
-          <p class="copy--small box--small">Do not forget the -m flag, if you do...this will happen.</p>
-          <div class="fragment">
-            <iframe src="http://giphy.com/embed/12KiGLydHEdak8" width="480" height="276" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-          </div>
         </section>
       </section>
 
@@ -275,6 +278,7 @@ git commit -m "First commit. Added hello world to repository."
         <section>
           <h3>What did we just do??</h3>
           <p class="copy--small box--small">How is this all different than just saving a file?</p>
+          <img src="images/main-sections.png" class="img--bare" height="300px" />
           <ul class="list--tall copy--xsmall box--small">
             <li class="fragment">When we <span class ="green">add</span> a new file, we tell Git to add the file to the repository to be tracked.</li>
             <li class="fragment">When we <span class ="green">stage</span> an existing file (also with the keyword <code>add</code>), we are telling Git to track the current state of our file.</li>
@@ -309,11 +313,10 @@ gitk
         <section>
           <h3>Nobody's Perfect</h3>
           <div class="box"><h4>Undoing local changes</h4>
-                    <p class="copy--small box--small">If you haven't committed yet</p></div>
+                    <p class="copy--small box--small">If you haven't done "git add" yet</p></div>
           <div class = "box fragment">
             <p class="copy--small box--small">Open hello_world.txt and add some new text</p>
             <pre style="height: 120px; overflow: hidden"><code contenteditable class ="command-line">
-change hello_world.txt
 git checkout hello_world.txt
             </code></pre>
           </div>
@@ -321,7 +324,7 @@ git checkout hello_world.txt
         </section>
         <section>
           <h3>Nobody's Perfect</h3>
-          <div class="box"><h4>Undoing staged changes</h4></div>
+          <div class="box"><h4>Undoing staged changes (git add)</h4></div>
           <div class = "fragment">
             <p class="copy--small box--small">Open hello_world.txt and add some new text</p>
             <pre style="height: 140px; overflow: hidden"><code contenteditable class ="command-line">
@@ -339,8 +342,8 @@ git checkout hello_world.txt
             <p class="copy--small box--small">Open hello_world.txt and add some new text</p>
             <pre style="height: 160px; overflow: hidden"><code contenteditable class ="command-line">
 git add hello_world.txt
-git commit -am "Changing and committing some lines"
-git log --pretty=oneline
+git commit -m "Changing and committing some lines"
+git log
 git revert [HASH]
             </code></pre>
           </div>
@@ -422,7 +425,7 @@ git merge version2
           </code></pre>
           <p class="box--small copy--xsmall">* Rebasing is another option, but will not be covered in this workshop.</p>
         </section>
-        <section>
+        <!-- <section>
           <h3>Merging</h3>
           <div class="box--small"><h4>Merge conflicts</h4>
                     <p class="box--small copy--small">Change first line in hello_world.txt in master branch</p>
@@ -446,7 +449,7 @@ git commit -m "Changing first line in master"
           git merge master
           </code></pre></div>
           <p class="box--small copy--small fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
-        </section>
+        </section> -->
       </section>
 
       <!-- GitHub-->
@@ -622,7 +625,7 @@ git fetch upstream
 
     <footer>
       <div class="copyright">
-        @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToGit &nbsp;
+        @gdiIndy
         <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
           <img alt="Creative Commons License" class="img--bare" src="images/cc.png" />
         </a>
