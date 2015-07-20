@@ -46,6 +46,16 @@
 	line-height: 20px;
 	font-size: 16px;
 }
+@media (max-width:768px) {
+	.gdi-main .navbar-default .navbar-nav>li>a {
+		padding: 10px 15px;
+	}
+
+	.navbar-header {
+		width: 150px;
+		float: left;
+	}
+}
 
 .gdi-main .navbar-default .navbar-nav>li>a:hover,
 .gdi-main .navbar-default .navbar-nav>li.active>a, .gdi-main .navbar-default .navbar-nav>.open>a {
