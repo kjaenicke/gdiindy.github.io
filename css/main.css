@@ -164,6 +164,10 @@
     margin: .35rem 0rem;
 }
 
+.classes .meetup-overview p{
+    font-size: 18px;
+}
+
 .classes .meetup-map {
     float: left;
     display: block !important;
@@ -322,6 +326,15 @@ html, body {
     width: 61.158%;
     margin-right: 0;
 }
+
+.single-profile .profile-content{
+    font-size: 18px;
+}
+
+.single-profile .profile-content h3{
+    font-size: 48px;
+}
+
 .profile-left h3, .profile-right h3 {
     border-bottom: 1px dashed #f95a61;
     padding-bottom: 2px;
