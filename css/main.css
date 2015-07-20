@@ -164,9 +164,9 @@
 }
 
 .classes .meetup-map p {
-    font-size: 1.025rem;
+    font-size: 15px;
     font-weight: 300;
-    letter-spacing: .05rem;
+    letter-spacing: 3px;
     color: #2d2e2e;
     line-weight: .3rem;
     line-height: 1.5rem;
@@ -174,10 +174,12 @@
 .classes .meetup-map .button {
     background-color: #f95a61;
     color: white;
-    width: 100%;
+    width: 250px;
     margin-top: 1rem;
     text-align: center;
     text-decoration: none;
+    padding:5px 10px;
+    display:block;
 }
 
 
