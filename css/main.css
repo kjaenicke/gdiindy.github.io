@@ -384,5 +384,12 @@ html, body {
     padding: 10px 20px;
     margin: 20px auto;
     cursor: pointer;
-  }
+}
+
+p {
+	font-size: 18px;
+}
+
+.meetup-callout {
+	text-align: center;
 }
