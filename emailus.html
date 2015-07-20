@@ -35,7 +35,16 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="classes.html">Classes</a></li>
+            <li class="dropdown">
+                <a id="dClasses" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Classes
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dClasses">
+                    <li><a href="classes.html">Class Resource</a></li>
+                    <li><a href="upcoming.html">Upcoming Classes</a></li>
+                </ul>
+            </li>
             <li><a href="links.html">Resources</a></li>
             <li class="dropdown active">
                 <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

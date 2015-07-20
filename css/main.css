@@ -106,6 +106,60 @@
 }
 
 
+.classes .meetup-overview {
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    float: left;
+    border-bottom: 1px dashed #F95A61;
+}
+.classes .meetup-overview h3 {
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin: auto;
+    padding: .1rem;
+    line-height: 1.3rem;
+}
+.classes .meetup-overview h3 a {
+    color: #282828;
+}
+.classes .meetup-overview .subtitle {
+    font-weight: 400;
+    color: #f95a61;
+    font-style: italic;
+    font-weight: 400;
+    font-size: .85rem;
+    text-transform: none;
+    letter-spacing: .06rem;
+    margin: .35rem 0rem;
+}
+
+.classes .meetup-map {
+    float: left;
+    display: block !important;
+    margin-right: 3.57866%;
+    width: 35.26334%;
+    align: center;
+    padding: 0px 15px 0 0px;
+}
+
+.classes .meetup-map p {
+    font-size: 1.025rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    color: #2d2e2e;
+    line-weight: .3rem;
+    line-height: 1.5rem;
+}
+.classes .meetup-map .button {
+    background-color: #f95a61;
+    color: white;
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
 
 
 

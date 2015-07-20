@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -26,6 +25,7 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
+
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -35,7 +35,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
+            <li class="dropdown active">
                 <a id="dClasses" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Classes
                     <span class="caret"></span>
@@ -46,7 +46,7 @@
                 </ul>
             </li>
             <li><a href="links.html">Resources</a></li>
-            <li class="dropdown active">
+            <li class="dropdown">
                 <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Contact Us
                     <span class="caret"></span>
@@ -63,18 +63,69 @@
 </nav>
 
 <div class="container">
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-
-    <iframe style="border:none;height:2000px;" width="100%"  src="https://docs.google.com/a/salesforce.com/forms/d/1PJnrXytzXXz003NvGx93gSihlA56kJ0ToZe8M-_oBO8/viewform"></iframe>
+    <div class="row"><h2>Upcoming Events</h2><br/>&nbsp;git</div>
+<div class="classes"></div>
 
 </div>
 <!-- /container -->
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
 <script src="js/vendor/bootstrap.min.js"></script>
 
 <script src="js/main.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/moment.js"></script>
+
+<script type="text/template" id="meetup">
+    <% _.each( classesArr,function(course){ %>
+    <div class="meetup-overview">
+        <h3>
+            <a href="<%= course.event_url %>"><%= course.name %></a>
+            <% if( typeof course.rsvp_limit !== "undefined " && course.yes_rsvp_count >= course.rsvp_limit) { %><span class="closed">sold out</span>
+            <% } %>
+        </h3>
+        <p class="subtitle">[ <%= moment(course.time).format("dddd, MMMM Do YYYY, h:mm a") %>
+            <% if(typeof course.venue !== "undefined" ) { %>
+            , <a href=" https://maps.google.com/?q=<%= course.venue.address_1 %>, <%= course.venue.city %>, <%= course.venue.state %>"><%= course.venue.address_1 %>, <%= course.venue.city %>, <%= course.venue.state %></a>
+            <% } %>
+            ] </p>
+        <% if( typeof course.venue !== "undefined" && course.venue.lat !== 0) { %>
+        <div class="meetup-map hide">
+            <img src= "https://maps.google.com/maps/api/staticmap?size=250x250&sensor=false&zoom=14&markers=<%= course.venue.lat %>%2C<%= course.venue.lon %>" alt="chapter map">
+            <% if( typeof course.rsvp_limit !== "undefined " && course.yes_rsvp_count >= course.rsvp_limit) { } else { %>
+            <p><a href="<%= course.event_url %>" class="button">RSVP</a></p>
+            <% } %>
+        </div>
+        <% } %>
+
+
+        <p><%= course.description.substring(0, 400) %><a href="<%= course.event_url %>"> &hellip;read more</a></p>
+        <% if( typeof course.venue !== "undefined" ||  course.rsvp_limit !== "undefined " && course.yes_rsvp_count >= course.rsvp_limit) { } else { %>
+        <p><a href="<%= course.event_url %>" class="button">RSVP</a></p>
+        <% } %>
+    </div>
+    <% }); %>
+</script>
+
+<script type="text/javascript">
+
+    var meetup_url = '/meetups/indianapolis.json';
+    var classesArr = null;
+    $.getJSON(meetup_url).done(function (classesData){
+        if(classesData.length>0) {
+            classesArr = classesData.slice(0,3);
+            var classes = $('#meetup').html();
+            //instead send classesArr to template where _.each is waiting...
+            //idea seen here: http://stackoverflow.com/questions/4778881/how-to-use-underscore-js-as-a-template-engine
+            $(".classes").html(_.template(classes,classesArr));
+            $(".classes").append("<p><a href=\"http://meetup.com/Girl-Develop-It-Indianapolis\">More Events</a></p>");
+        } else {
+            $(".classes").html("<p class=\"uhOh\">Sadly, no meetups are currently scheduled for this Chapter. <a href=\"http://meetup.com/Girl-Develop-It-Indianapolis\">Join our meetup group</a> to be notified when a new meetup is happening. Thanks for visiting us!</p>")};
+    });
+
+</script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!--
