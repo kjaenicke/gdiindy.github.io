@@ -108,6 +108,7 @@
 	box-shadow: none;
 	border-radius: 0;
 	margin: 0;
+	margin-bottom: 20px;
 }
 
 .gdi-links .gdi-pad-col:hover, .gdi-classes .gdi-pad-col:hover {
@@ -120,4 +121,17 @@
 
 .gdi-classes ul, .gdi-links ul {
 	padding-left: 20px;
+	clear: both;
+}
+.gdi-classes .gdi-pad-col > ul, .gdi-links .gdi-pad-col > ul {
+	padding-left: 0;
+	clear: both;
+}
+
+.gdi-classes .gdi-pad-col > img {
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin: 10px;
+	margin-left: 0;
 }
