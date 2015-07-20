@@ -326,3 +326,29 @@ html, body {
     border-bottom: 1px dashed #f95a61;
     padding-bottom: 2px;
 }
+
+.button {
+ display: block;
+ font-weight: 400;
+ color: white;
+ font-size: .8rem;
+ text-transform: uppercase;
+ letter-spacing: .14rem;
+ background-color: $gold;
+ padding: .5rem;
+ border: none;
+}
+.button:hover{
+  background-color: $black;
+  color: $blush;
+}
+
+.donate-button {
+    border: 0;
+    background: #f95a61;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 20px auto;
+    cursor: pointer;
+  }
+}
