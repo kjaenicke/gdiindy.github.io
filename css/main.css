@@ -82,6 +82,10 @@
 	.gdi-main .navbar-brand img {
 		width: 100%;
 	}
+
+	.classes .meetup-map {
+		width: 100%;
+	}
 }
 
 .gdi-main .navbar-default .navbar-nav>li>a:hover,
