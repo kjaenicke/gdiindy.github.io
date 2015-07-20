@@ -286,3 +286,43 @@ html, body {
 .content {
 	padding-bottom: 94px;
 }
+
+.single-profile {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2.5em;
+}
+
+.single-profile .profile-img {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 35.26334%;
+    padding: 0px 15px 0 0px;
+}
+.single-profile .profile-img img {
+    width: 100%;
+    margin-top: 25px;
+    box-shadow: .025rem .025rem .5rem #bdbec0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.single-profile .profile-content:last-child {
+    margin-right: 0;
+}
+
+.single-profile .profile-content {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 61.158%;
+    margin-right: 0;
+}
+.profile-left h3, .profile-right h3 {
+    border-bottom: 1px dashed #f95a61;
+    padding-bottom: 2px;
+}
