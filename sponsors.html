@@ -25,7 +25,7 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-
+<div class="wrapper">
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -34,8 +34,17 @@
 			</a>
         </div>
 		<ul class="nav navbar-nav">
-			<li><a href="#">Home</a></li>
-			<li><a href="classes.html">Classes</a></li>
+			<li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a id="dClasses" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Classes
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dClasses">
+                    <li><a href="classes.html">Class Resource</a></li>
+                    <li><a href="upcoming.html">Upcoming Classes</a></li>
+                </ul>
+            </li>
 			<li><a href="links.html">Resources</a></li>
             <li class="active"><a href="sponsors.html">Sponsors</a></li>
             <li class="dropdown">
@@ -103,6 +112,20 @@
     </div>
 </div>
 <!-- /container -->
+<footer>
+	<div class="footer">
+		<div class="social">
+			<div class="social-menu">
+				<ul class="social-icons">
+					<li class="menu-item"><a target="_blank" href="http://www.meetup.com/Girl-Develop-It-Indianapolis/"><img src="img/meetup-white.png" alt="meetup" /></a></li>
+					<li class="menu-item"><a target="_blank" href="http://twitter.com/gdiIndy"><img src="img/twitter-white.png" alt="twitter" /></a></li>
+					<li class="menu-item"><a target="_blank" href="http://facebook.com/gdiIndianapolis"><img src="img/facebook-white.png" alt="facebook" /></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
