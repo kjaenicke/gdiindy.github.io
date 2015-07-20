@@ -10,14 +10,18 @@
 	border-bottom: none;
 }
 
-.gdi-main .navbar-brand {
+.gdi-main .navbar-brand,
+.gdi-main .navbar-brand:hover {
 	height: auto;
 	margin-right: 50px;
 	padding: 5px 10px;
+	color: white;
 }
 
 .gdi-main .navbar-brand img {
 	height: 100px;
+	display: inline;
+	margin-right: 20px;
 }
 
 .gdi-main .navbar-nav {
@@ -69,6 +73,8 @@
 
 .gdi-main .gdi-banner {
 	background-image: url(../img/GDI_Banner_Pic.png);
+	background-position-x: center;
+	background-repeat: no-repeat;
 	height: 325px;
 	color: white;
 	font-size: 50px;
@@ -178,6 +184,7 @@
 
 .footer {
 	background-color: #2a4758;
+	margin-top: 30px;
 }
 
 .social-icons {
