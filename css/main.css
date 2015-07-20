@@ -3,6 +3,45 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.gdi-main .navbar {
+	background-color: #f95a61;
+	background-image: none;
+}
+
+.gdi-main .navbar-brand {
+	height: auto;
+	margin-right: 50px;
+}
+
+.gdi-main .navbar-brand img {
+	height: 100px;
+}
+
+.gdi-main .navbar-nav {
+	margin: 0 50px 0 0;
+	float: right;
+}
+
+.gdi-main .navbar-default .navbar-nav>li {
+	height: 100%;
+	margin: 0 3px;
+}
+
+.gdi-main .navbar-default .navbar-nav>li>a {
+	padding: 55px 15px;
+	color: white;
+	font-style: italic;
+	font-weight: 300;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.gdi-main .navbar-default .navbar-nav>li>a:hover,
+.gdi-main .navbar-default .navbar-nav>li.active>a {
+	background-color: #282828;
+	color: #fbcfc6;
+	background-image: none;
+}
 
 .gdi-main .gdi-banner {
 
