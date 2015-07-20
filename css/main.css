@@ -6,11 +6,14 @@
 .gdi-main .navbar {
 	background-color: #f95a61;
 	background-image: none;
+	margin-bottom: 0;
+	border-bottom: none;
 }
 
 .gdi-main .navbar-brand {
 	height: auto;
 	margin-right: 50px;
+	padding: 5px 10px;
 }
 
 .gdi-main .navbar-brand img {
@@ -39,7 +42,7 @@
 
 
 .gdi-main .navbar-default .navbar-nav>li>a {
-	padding: 55px 15px;
+	padding: 45px 15px;
 	color: white;
 	font-style: italic;
 	font-weight: 300;
@@ -65,11 +68,12 @@
 }
 
 .gdi-main .gdi-banner {
-
-    border-radius: 10px;
-    background-color: #f7d7d9;
-    box-shadow: 0px 0px 20px #cccccc;
-    border: solid 2px #cccccc;
+	background-image: url(../img/GDI_Banner_Pic.png);
+	height: 325px;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	padding: 115px 0;
 }
 
 .gdi-main .gdi-logo {
@@ -152,4 +156,52 @@
 	float: left;
 	margin: 10px;
 	margin-left: 0;
+}
+
+.underlined-headline hr {
+	width: 400px;
+	border-top: 2px solid #d8ae64;
+	border-bottom: 2px solid #d8ae64;
+	height: 2px;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+.underlined-headline h2 {
+	text-transform: uppercase;
+	color: #282828;
+	font-weight: 300;
+	text-align: center;
+	font-size: 25px;
+	margin-top: 30px;
+}
+
+.footer {
+	background-color: #2a4758;
+}
+
+.social-icons {
+	list-style: none;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.social-icons .menu-item {
+	display: inline-block;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	border-left: 1px solid rgba(255, 255, 255, .12);
+	height: 64px;
+	width: 64px;
+}
+
+.social-icons .menu-item:last-child {
+	border-right: 1px solid rgba(255, 255, 255, .12);
+}
+
+.social-icons .menu-item img {
+	height: 22px;
+	width: 22px;
+	margin-top: 21px;
 }
