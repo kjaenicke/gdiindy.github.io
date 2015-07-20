@@ -46,6 +46,16 @@
 	line-height: 20px;
 	font-size: 16px;
 }
+@media (max-width:768px) {
+	.gdi-main .navbar-default .navbar-nav>li>a {
+		padding: 10px 15px;
+	}
+
+	.navbar-header {
+		width: 150px;
+		float: left;
+	}
+}
 
 .gdi-main .navbar-default .navbar-nav>li>a:hover,
 .gdi-main .navbar-default .navbar-nav>li.active>a, .gdi-main .navbar-default .navbar-nav>.open>a {
@@ -72,7 +82,7 @@
     background-color: #f0e2e9;
     border-radius: 10px;
     margin: 10px;
-    padding: 10px 20px;
+	padding: 10px 20px;
 }
 
 .gdi-mission {
@@ -97,15 +107,25 @@
     background-color: #c3e2a5;
 }
 
-.gdi-classes .gdi-pad-col {
-    background-color: #d9e2f2;
+.gdi-links h2, .gdi-classes h2 {
+	margin-left: 15px;
 }
 
-.gdi-links .gdi-pad-col {
-    background-color: #F7E8BB;
+.gdi-links .gdi-pad-col, .gdi-classes .gdi-pad-col {
+    background-color: #e4e9e5;
+	border: none;
+	transition: background, .5s;
+	box-shadow: none;
+	border-radius: 0;
+	margin: 0;
+	margin-bottom: 20px;
+	min-height: 90px;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
-
+.gdi-links .gdi-pad-col:hover, .gdi-classes .gdi-pad-col:hover {
+	background-color: #fbcfc6;
+}
 .classes .meetup-overview {
     margin-bottom: 1.5em;
     padding-bottom: 1.5em;
@@ -161,15 +181,28 @@
 }
 
 
+.gdi-classes li, .gdi-links li {
+	list-style: none;
+}
+.gdi-classes ul, .gdi-links ul {
+	padding-left: 20px;
+	clear: both;
+}
+.gdi-links .gdi-pad-col > ul {
+	padding-left: 0;
+	clear: both;
+}
 
+.gdi-classes .gdi-pad-col > ul {
+	padding-left: 0;
+	clear: both;
+	display: none;
+}
 
-
-
-
-
-
-
-
-
-
-
+.gdi-classes .gdi-pad-col > img {
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin: 10px;
+	margin-left: 0;
+}
