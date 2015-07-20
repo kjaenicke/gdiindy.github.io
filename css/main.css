@@ -25,7 +25,18 @@
 .gdi-main .navbar-default .navbar-nav>li {
 	height: 100%;
 	margin: 0 3px;
+
 }
+
+.gdi-main .navbar-default .navbar-nav>li .dropdown-menu li a{
+    color:#ffffff;
+}
+.gdi-main .navbar-default .navbar-nav>li .dropdown-menu,  .gdi-main .navbar-default .navbar-nav>li .dropdown-menu li a:hover{
+    background: #282828;
+    color:#fbcfc6;
+}
+
+
 
 .gdi-main .navbar-default .navbar-nav>li>a {
 	padding: 55px 15px;
