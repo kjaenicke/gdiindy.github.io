@@ -30,7 +30,7 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="img/gdi-indy-logo-white.png" alt="logo white" />
                 GDI Indy
             </a>
@@ -100,28 +100,28 @@
     <% _.each( classesArr,function(course){ %>
     <div class="meetup-overview">
         <h3>
-            <a href="<%= course.event_url %>"><%= course.name %></a>
+            <a target="blank" href="<%= course.event_url %>"><%= course.name %></a>
             <% if( typeof course.rsvp_limit !== "undefined " && course.yes_rsvp_count >= course.rsvp_limit) { %><span class="closed">sold out</span>
             <% } %>
         </h3>
         <p class="subtitle">[ <%= moment(course.time).format("dddd, MMMM Do YYYY, h:mm a") %>
             <% if(typeof course.venue !== "undefined" ) { %>
-            , <a href=" https://maps.google.com/?q=<%= course.venue.address_1 %>, <%= course.venue.city %>, <%= course.venue.state %>"><%= course.venue.address_1 %>, <%= course.venue.city %>, <%= course.venue.state %></a>
+            , <a target="blank" href=" https://maps.google.com/?q=<%= course.venue.address_1 %>, <%= course.venue.city %>, <%= course.venue.state %>"><%= course.venue.address_1 %>, <%= course.venue.city %>, <%= course.venue.state %></a>
             <% } %>
             ] </p>
         <% if( typeof course.venue !== "undefined" && course.venue.lat !== 0) { %>
         <div class="meetup-map hide">
             <img src= "https://maps.google.com/maps/api/staticmap?size=250x250&sensor=false&zoom=14&markers=<%= course.venue.lat %>%2C<%= course.venue.lon %>" alt="chapter map">
             <% if( typeof course.rsvp_limit !== "undefined " && course.yes_rsvp_count >= course.rsvp_limit) { } else { %>
-            <p><a href="<%= course.event_url %>" class="button">RSVP</a></p>
+            <p><a target="blank" href="<%= course.event_url %>" class="button">RSVP</a></p>
             <% } %>
         </div>
         <% } %>
 
 
-        <p><%= course.description.substring(0, 400) %><a href="<%= course.event_url %>"> &hellip;read more</a></p>
+        <p><%= course.description.substring(0, 400) %><a target="blank" href="<%= course.event_url %>"> &hellip;read more</a></p>
         <% if( typeof course.venue !== "undefined" ||  course.rsvp_limit !== "undefined " && course.yes_rsvp_count >= course.rsvp_limit) { } else { %>
-        <p><a href="<%= course.event_url %>" class="button">RSVP</a></p>
+        <p><a target="blank" href="<%= course.event_url %>" class="button">RSVP</a></p>
         <% } %>
     </div>
     <% }); %>
@@ -138,9 +138,9 @@
             //instead send classesArr to template where _.each is waiting...
             //idea seen here: http://stackoverflow.com/questions/4778881/how-to-use-underscore-js-as-a-template-engine
             $(".classes").html(_.template(classes,classesArr));
-            $(".classes").append("<p><a href=\"http://meetup.com/Girl-Develop-It-Indianapolis\">More Events</a></p>");
+            $(".classes").append("<p><a target=\"blank\" href=\"http://meetup.com/Girl-Develop-It-Indianapolis\">More Events</a></p>");
         } else {
-            $(".classes").html("<p class=\"uhOh\">Sadly, no meetups are currently scheduled for this Chapter. <a href=\"http://meetup.com/Girl-Develop-It-Indianapolis\">Join our meetup group</a> to be notified when a new meetup is happening. Thanks for visiting us!</p>")};
+            $(".classes").html("<p class=\"uhOh\">Sadly, no meetups are currently scheduled for this Chapter. <a target=\"blank\" href=\"http://meetup.com/Girl-Develop-It-Indianapolis\">Join our meetup group</a> to be notified when a new meetup is happening. Thanks for visiting us!</p>")};
     });
 
 </script>
