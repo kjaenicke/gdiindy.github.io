@@ -15,12 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-        body {
-            padding-top: 50px;
-            padding-bottom: 20px;
-        }
-    </style>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -34,40 +28,31 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">GDI Indy</a>
+            <a class="navbar-brand" href="#">
+                <img src="img/gdi-indy-logo-white.png" alt="logo white" />
+            </a>
         </div>
-        <div>
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="classes.html">Classes</a></li>
-                <li><a href="links.html">Resources</a></li>
-                <!--<li class="active"><a href="volunteer.html">Volunteer</a></li>-->
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="links.html">Resources</a></li>
+            <li class="dropdown active">
+                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contact Us
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="#">Email Us</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="#">Scholarship</a></li>
 
-                <li class="dropdown active">
-                    <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contact Us
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dLabel">
-                        <li><a href="#">Email Us</a></li>
-                        <li><a href="volunteer.html">Volunteer</a></li>
-                        <li><a href="#">Scholarship</a></li>
-
-                    </ul>
-                </li>
-
-
-
-
-            </ul>
-        </div>
+                </ul>
+            </li>
+        </ul>
     </div>
 </nav>
 
 <div class="container">
-
-
-
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="gdi-banner container">
         <div class="row">
@@ -85,85 +70,6 @@
 
     <iframe style="margin-top: 20px;border:none;height:2200px;" width="100%"  src="https://docs.google.com/a/salesforce.com/forms/d/15Q6fpPauqQcgRx8wJLqKmZYishIZI_tRoDkMqSlfyP8/viewform"></iframe>
 
-    <!--<div class="gdi-links container">-->
-        <!--<div class="row">-->
-            <!--<h2>Resources</h2>-->
-        <!--</div>-->
-        <!--<div class="row">-->
-
-            <!--<div class="col-md-4 col-md-push-4">-->
-                <!--<div class="gdi-pad-col">-->
-                    <!--<h4>Cheatsheets/Reference</h4>-->
-                    <!--<ul>-->
-                        <!--<li><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">Mozilla Developer's-->
-                            <!--Network Reference</a>-->
-                        <!--</li>-->
-                        <!--<li><a href="http://www.w3schools.com" target="_blank">W3 Schools - Reference and Tutorials</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="http://www.smashingmagazine.com/wp-content/uploads/images/html5-cheat-sheet/html5-cheat-sheet.pdf"-->
-                               <!--target="_blank">HTML-->
-                                <!--Cheat Sheet</a></li>-->
-                        <!--<li>-->
-                            <!--<a href="http://www.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf"-->
-                               <!--target="_blank">CSS-->
-                                <!--Cheat Sheet</a></li>-->
-                        <!--<li><a href="http://www.cssfontstack.com/" target="_blank">Web Safe Fonts</a></li>-->
-                        <!--<li><a href="https://www.google.com/fonts target="_blank">Google Fonts</a></li>-->
-                        <!--<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Tools/ColorPicker_Tool"-->
-                               <!--target="_blank">Color Picker Tool</a></li>-->
-                        <!--<li><a href="http://guyroutledge.github.io/box-model/" target="_blank">Interactive box-model demo</a></li>-->
-                    <!--</ul>-->
-                    <!--<h4>Tutorials/Classes</h4>-->
-                    <!--<ul>-->
-                        <!--<li><a href="http://code.org/" target="_blank">code.org</a></li>-->
-                        <!--<li><a href="http://www.khanacedemy.org" target="_blank">Khan Academy</a></li>-->
-                        <!--<li><a href="http://www.codeacademy.org" target="_blank">Code Academy</a></li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-            <!--</div>-->
-
-
-            <!--<div class="col-md-4 col-md-pull-4">-->
-                <!--<div class="gdi-pad-col">-->
-
-                    <!--<h4>Online Playgrounds</h4>-->
-                    <!--<ul>-->
-                        <!--<li><a href="http://www.codepen.io" target="_blank">Codepen</a>-->
-                            <!--<ul>-->
-                                <!--<li><a href="http://www.codepen.io/gdiindy" target="_blank">GDI Indy Codepen Page</a>-->
-                                <!--</li>-->
-                            <!--</ul>-->
-                        <!--</li>-->
-                        <!--<li><a href="http://www.jsfiddle.net" target="_blank">JS Fiddle</a></li>-->
-                    <!--</ul>-->
-
-                    <!--<h4>Editors</h4>-->
-                    <!--<ul>-->
-                        <!--<li><a href="http://www.brackets.io" target="_blank">Brackets</a> - Mac, Windows, Linux</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="col-md-4">-->
-                <!--<div class="gdi-pad-col">-->
-                    <!--<h4>Books</h4>-->
-                    <!--<ul>-->
-                        <!--<li><a href="http://www.amazon.com/dp/1118008189/ref=cm_sw_r_tw_dp_wJBZub1WXW2W2"-->
-                               <!--target="_blank">HTML and CSS: Design and Build Websites</a></li>-->
-                        <!--<li><a href="http://www.amazon.com/dp/0596159900/ref=cm_sw_r_tw_dp_.gRZub09T6J67" target="_blank">Head First HTML and CSS</a></li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-            <!--</div>-->
-
-        <!--</div>-->
-
-        <!--<hr>-->
-
-        <!--<footer>-->
-            <!--<p></p>-->
-        <!--</footer>-->
-    <!--</div>-->
 </div>
 <!-- /container -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -186,3 +92,28 @@
 -->
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
