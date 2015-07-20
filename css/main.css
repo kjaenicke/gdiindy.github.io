@@ -62,6 +62,10 @@
 		width: 150px;
 		float: left;
 	}
+
+	.underlined-header hr {
+		width: 100%;
+	}
 }
 
 .gdi-main .navbar-default .navbar-nav>li>a:hover,
@@ -73,7 +77,7 @@
 
 .gdi-main .gdi-banner {
 	background-image: url(../img/GDI_Banner_Pic.png);
-	background-position-x: center;
+	background-position: top, center;
 	background-repeat: no-repeat;
 	height: 325px;
 	color: white;
