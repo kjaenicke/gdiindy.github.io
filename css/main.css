@@ -22,7 +22,7 @@
     background-color: #f0e2e9;
     border-radius: 10px;
     margin: 10px;
-    padding: 10px 20px;
+	padding: 10px 20px;
 }
 
 .gdi-mission {
@@ -47,25 +47,27 @@
     background-color: #c3e2a5;
 }
 
-.gdi-classes .gdi-pad-col {
-    background-color: #d9e2f2;
+.gdi-links h2, .gdi-classes h2 {
+	margin-left: 15px;
 }
 
-.gdi-links .gdi-pad-col {
-    background-color: #F7E8BB;
+.gdi-links .gdi-pad-col, .gdi-classes .gdi-pad-col {
+    background-color: #e4e9e5;
+	border: none;
+	transition: background, .5s;
+	box-shadow: none;
+	border-radius: 0;
+	margin: 0;
 }
 
+.gdi-links .gdi-pad-col:hover, .gdi-classes .gdi-pad-col:hover {
+	background-color: #fbcfc6;
+}
 
+.gdi-classes li, .gdi-links li {
+	list-style: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.gdi-classes ul, .gdi-links ul {
+	padding-left: 20px;
+}
