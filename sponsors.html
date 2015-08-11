@@ -29,13 +29,13 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="index.html">
 				<img src="img/gdi-indy-logo-white.png" alt="logo white" />
 				GDI Indy
 			</a>
         </div>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
+			<li><a href="index.html">Home</a></li>
 			<li><a href="aboutus.html">About Us</a></li>
             <li class="dropdown">
                 <a id="dClasses" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,7 +48,7 @@
                 </ul>
             </li>
 			<li><a href="links.html">Resources</a></li>
-            <li> <a href="sponsors.html">Sponsors</a></li>
+            <li class="active"><a href="sponsors.html">Sponsors</a></li>
             <li class="dropdown">
                 <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Contact Us
@@ -58,6 +58,7 @@
                     <li><a href="emailus.html">Email Us</a></li>
                     <li><a href="volunteer.html">Volunteer</a></li>
                     <li><a href="scholarship.html">Scholarship</a></li>
+
                 </ul>
             </li>
 		</ul>
@@ -65,64 +66,72 @@
 </nav>
 
 <div class="container content">
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="gdi-banner container">
-		<span>Don't be shy. Develop it.</span>
-		<img src="img/flourish.png" alt="flourish" />
-    </div>
-
-
-    <div class="gdi-home container">
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-
-				<p class="meetup-callout">
-					<a href="http://www.meetup.com/Girl-Develop-It-Indianapolis/" target="_blank">Join us on Meetup now!</a>
-				</p>
-
-				<section class="mission-statement">
-					<div class="underlined-headline">
-						<h2>Who We Are</h2>
-						<hr>
-					</div>
-					<p style="font-size:18px">
-						Girl Develop It is an international non-profit that exists to provide affordable and accessible
-						programs to women who want to learn software development through mentorship and hands-on
-						instruction.
-					</p>
-				</section>
-
-				<section class="mission-statement">
-					<div class="underlined-headline">
-						<h2>Our Vision</h2>
-						<hr>
-					</div>
-					<p style="font-size:18px">
-						Our vision is to create a network of empowered women who feel confident in their abilities to code
-						and build beautiful web and mobile applications. By teaching women around the world from diverse
-						backgrounds to learn software development, we can help women improve their careers and confidence in
-						their everyday lives.
-					</p>
-				</section>
-
-				<section class="mission-statement">
-					<div class="underlined-headline">
-						<h2>Our Values</h2>
-						<hr>
-					</div>
-					<p style="font-size:18px">
-						We are committed to making sure women of all ages, races, education levels, income, and upbringing
-						can build confidence in their skill set to develop web and mobile applications. Our goal is to
-						provide powerful hands-on programs to women seeking professional help in software development and
-						create basic to advanced web and mobile applications
-					</p>
-				</section>
-            </div>
+    <div class="gdi-sponsors container">
+        <div class="underlined-headline">
+            <h2>Sponsors</h2>
+            <hr>
         </div>
+        <div class="col-md-4">
+             <a href="https://www.speakeasyindy.com/"  target="_blank"> 
+                 <div align="center">
+                <img border="0" alt="The Speak Easy" src="img/speakeasy.jpeg"  width="auto" height="100" >
+                 </div>
+            <div align="center">The Speak Easy</div>
+            </a>           
+        </div>
+                <div class="col-md-4">
+                     <a href="https://www.salesforce.com/" target='_blank'>
+                         <div align="center">
+                <img border="0" alt="Salesforce" src="img/salesforce.jpeg" width="auto" height="100">
+                         </div>
+            <div align="center">Salesforce</div>
+            </a>           
+        </div>
+                        <div class="col-md-4">
+                     <a href="https://vitamintalent.com/" target='_blank'>
+                         <div align="center">
+                <img border="0" alt="Vitamin Talent" src="img/vitaminT.jpeg" width="auto" height="100">
+                         </div>
+            <div align="center">Vitamin Talent</div>
+            </a>         
+        </div>
+                        <div class="col-md-4">
+                     <a href="http://pearingscafe.com/" target='_blank'>
+                         <div align="center">
+                <img border="0" alt="Pearings Cafe" src="img/pearings.jpeg" width="auto" height="100">
+                         </div>
+            <div align="center">Pearings Cafe</div>
+            </a>         
+        </div>
+                                <div class="col-md-4">
+                     <a href="http://www.inin.com/" target='_blank'>
+                         <div align="center">
+                <img border="0" alt="Interactive Intelligence" src="img/interactiveIntelligence.jpeg" width="auto" height="100">
+                         </div>
+            <div align="center">Interactive Intelligence</div>
+            </a>         
+        </div>    
+    </div>
+    <div class="gdi-donate containter">
+        <div class="underlined-headline">
+            <h2>Donate</h2>
+            <hr>
+        </div>
+        <p align="center"  style="font-size:18px">
+            If you want to support women in technology and women transitioning into tech careers today, you can help us improve the technology industry's diversity problem now. We appreciate all contributions from                     individuals and companies of any amount, and we put them to good use to grow the amount of and impact on our students. All donations are 501c3 tax-deductible. By supporting Girl Develop It, you are supporting               the ideal that it’s never too late to learn. Girl Develop It engages students from age 18-70, and we firmly believe that there should be avenues for women of all ages to benefit from the opportunities and                   rewards provided by learning web development.
+        </p>
+        <form  action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="FB3QVSP8K3GR8">
+        <input type="submit" border="0" name="submit" value="Donate Now" class="button donate-button">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"  width="1" height="1">
+        </form>
+        <p align="center">
+        Please indicate "Indianapolis Chapter" in the Special Instructions section, for your dontation to be applied to our chapter.  Thank You!
+        </p>
     </div>
 </div>
+<!-- /container -->
 <footer>
 	<div class="footer">
 		<div class="social">
@@ -137,7 +146,6 @@
 	</div>
 </footer>
 </div>
-<!-- /container -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>GDI Indy</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body class="gdi-main">
+<div class="wrapper">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/gdi-indy-logo-white.png" alt="logo white" />
+                GDI Indy
+            </a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li class="dropdown active">
+                <a id="dClasses" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Classes
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dClasses">
+                    <li><a href="classes.html">Class Resource</a></li>
+                    <li><a href="upcoming.html">Upcoming Classes</a></li>
+                </ul>
+            </li>
+            <li><a href="links.html">Resources</a></li>
+            <li> <a href="sponsors.html">Sponsors</a></li>
+            <li class="dropdown">
+                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contact Us
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="emailus.html">Email Us</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="scholarship.html">Scholarship</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container content">
+    <div class="row">                
+        <div class="underlined-headline">
+            <h2>Upcoming Events</h2>
+            <hr>        
+        </div>
+        <br/>&nbsp;
+    </div>
+<div class="classes"></div>
+
+</div>
+<!-- /container -->
+<footer>
+    <div class="footer">
+        <div class="social">
+            <div class="social-menu">
+                <ul class="social-icons">
+                    <li class="menu-item"><a target="_blank" href="http://www.meetup.com/Girl-Develop-It-Indianapolis/"><img src="img/meetup-white.png" alt="meetup" /></a></li>
+                    <li class="menu-item"><a target="_blank" href="http://twitter.com/gdiIndy"><img src="img/twitter-white.png" alt="twitter" /></a></li>
+                    <li class="menu-item"><a target="_blank" href="http://facebook.com/gdiIndianapolis"><img src="img/facebook-white.png" alt="facebook" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/moment.js"></script>
+
+<script type="text/template" id="meetup">
+    <% _.each( classesArr,function(course){ %>
+    <div class="meetup-overview">
+        <h3>
+            <a target="blank" href="<%= course.event_url %>"><%= course.name %></a>
+            <% if( typeof course.rsvp_limit !== "undefined " && course.yes_rsvp_count >= course.rsvp_limit) { %><span class="closed">sold out</span>
+            <% } %>
+        </h3>
+        <p class="subtitle">[ <%= moment(course.time).format("dddd, MMMM Do YYYY, h:mm a") %>
+            <% if(typeof course.venue !== "undefined" ) { %>
+            , <a target="blank" href=" https://maps.google.com/?q=<%= course.venue.address_1 %>, <%= course.venue.city %>, <%= course.venue.state %>"><%= course.venue.address_1 %>, <%= course.venue.city %>, <%= course.venue.state %></a>
+            <% } %>
+            ] </p>
+        <% if( typeof course.venue !== "undefined" && course.venue.lat !== 0) { %>
+        <div class="meetup-map hide">
+            <img src= "https://maps.google.com/maps/api/staticmap?size=250x250&sensor=false&zoom=14&markers=<%= course.venue.lat %>%2C<%= course.venue.lon %>" alt="chapter map">
+            <% if( typeof course.rsvp_limit !== "undefined " && course.yes_rsvp_count >= course.rsvp_limit) { } else { %>
+            <p><a target="blank" href="<%= course.event_url %>" class="button">RSVP</a></p>
+            <% } %>
+        </div>
+        <% } %>
+
+
+        <p><%= course.description.substring(0, 400) %><a target="blank" href="<%= course.event_url %>"> &hellip;read more</a></p>
+        <% if( typeof course.venue !== "undefined" ||  course.rsvp_limit !== "undefined " && course.yes_rsvp_count >= course.rsvp_limit) { } else { %>
+        <p><a target="blank" href="<%= course.event_url %>" class="button">RSVP</a></p>
+        <% } %>
+    </div>
+    <% }); %>
+</script>
+
+<script type="text/javascript">
+
+    var meetup_url = '/meetups/indianapolis.json';
+    var classesArr = null;
+    $.getJSON(meetup_url).done(function (classesData){
+        if(classesData.length>0) {
+            classesArr = classesData.slice(0,3);
+            var classes = $('#meetup').html();
+            //instead send classesArr to template where _.each is waiting...
+            //idea seen here: http://stackoverflow.com/questions/4778881/how-to-use-underscore-js-as-a-template-engine
+            $(".classes").html(_.template(classes,classesArr));
+            $(".classes").append("<p><a target=\"blank\" href=\"http://meetup.com/Girl-Develop-It-Indianapolis\">More Events</a></p>");
+        } else {
+            $(".classes").html("<p class=\"uhOh\">Sadly, no meetups are currently scheduled for this Chapter. <a target=\"blank\" href=\"http://meetup.com/Girl-Develop-It-Indianapolis\">Join our meetup group</a> to be notified when a new meetup is happening. Thanks for visiting us!</p>")};
+    });
+
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+-->
+</body>
+</html>
