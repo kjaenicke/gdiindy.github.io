@@ -1,0 +1,7 @@
+{
+  "name": "js201-intro-to-jquery",
+  "version": "0.0.1",
+  "dependencies": {
+    "reveal.js": "~2.6.1"
+  }
+}
