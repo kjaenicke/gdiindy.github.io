@@ -28,6 +28,7 @@
     "by-id.html",
     "by-class.html",
     "complex-selectors.html",
+    "complex-selectors2.html",
     "develop-it-exercise-3.html",
     "getters-reading-elements.html",
     "reading-elements.html",
@@ -64,5 +65,6 @@
     "effect-options.html",
     "fadein-with-options.html",
     "more-effects.html",
-    "develop-it-exercise-9.html"
+    "develop-it-exercise-9.html",
+    "nextsteps.html"
 ]

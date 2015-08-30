@@ -1,0 +1,16 @@
+<h2>More</h2>
+
+<p>With this HTML:</p>
+<pre><code class="html" contenteditable>
+	&lt;ul id="main"&gt;
+	  &lt;li class="item" &gt;Item 1&lt;/li&gt;
+	  &lt;li class="item" &gt;Item 2&lt;/li&gt;
+	  &lt;li class="item active" &gt;Item 3&lt;/li&gt;
+	  &lt;li class="item" &gt;Item 4&lt;/li&gt;
+	  &lt;li class="item" &gt;Item 5&lt;/li&gt;
+	&lt;/ul&gt;
+</code></pre>
+<p>We can find our active item like this:</p>
+<pre><code class="js" contenteditable>$('#main .active')</code></pre>
+<p>Or the opposite:</p>
+<pre><code class="js" contenteditable>$('#main li:not(.active)')</code></pre>
