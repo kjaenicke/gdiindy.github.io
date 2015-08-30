@@ -5,8 +5,8 @@
 
     <title>Girl Develop It ~ Intro to Programming Concepts</title>
 
-    <meta name="description" content="This is a modified version of GDI Boulder's Intro to Programming Concepts">
-    <meta name="author" content="Girl Develop It Boulder ">
+    <meta name="description" content="This is a modified version of GDI Boulder's and GDI Ann Arbor's Intro to Programming Concepts">
+    <meta name="author" content="Girl Develop It Boulder">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -29,10 +29,11 @@
 
         <!-- Title -->
         <section>
-          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <img src="https://avatars0.githubusercontent.com/u/10690633?v=3&s=200" class="img--bare" height="200px" />
           <div class="box--small">
             <h3><span class="blue">Intro to Programming Concepts</span></h3>
             <h4><span class="green">For True Beginners!</span></h4>
+            <!-- TODO: fill in Your Name & @yourname, or add any other contact info you'd like! -->
           </div>
         </section>
 
@@ -43,6 +44,9 @@
               <ul>
                 <li>Run parts of your car.</li>
                 <li>Let you check your email.</li>
+                <li>Manage elevators.</li>
+                <li>Turn street lights on or off.</li>
+                <li>Tell a robot on Mars what to do.</li>
                 <li>Underlie that favorite app on your smartphone.</li>
               </ul>
             </li>
@@ -86,11 +90,11 @@
         </section>
 
         <section>
-          <h3>Programming Languages</h3>
+          <h3>Programming, Modeling, and Querying Languages</h3>
           <p class="box--small">For example:</p>
           <ul class="list--tall copy--small">
             <li class="fragment">To develop websites, you might use <strong>HTML, JavaScript, Python, Java, PHP</strong>.</li>
-            <li class="fragment">To create databases and move information in and out of them, you might use <strong>MySQL, SQL, Dbase</strong>.</li>
+            <li class="fragment">To create databases and move information in and out of them, you might use <strong>SQL with MySQL, SQL Server, or Dbase</strong>.</li>
             <li class="fragment">To write applications like Microsoft Word or Adobe Acrobat, you might use <strong>C++, Java, Visual Basic</strong></li>
           </ul>
         </section>
@@ -111,83 +115,79 @@
         </section>
 
         <section>
-          <h3>Demonstration</h3>
-          <ul class="copy--small box--small list--tall">
-            <li class="fragment">One person is the "program", and one person is the "computer".</li>
-            <li class="fragment">The "computer" has to do literally what the "program" says to do!</li>
-            <!-- <li class="fragment">We did one person (program) telling the other person (computer) what to do verbatim (answering the phone)</li> -->
-          </ul>
-        </section>
-
-        <section>
-          <h3>Memory</h3>
-          <p class="copy--small box">A computer doesn't have a memory like we do.</p>
-          <p class="copy--xsmall box">Sure, a computer has "memory"-- In fact it has a couple of kinds...</p>
+          <h3>Memory and Processor</h3>
+          <p class="copy--small box">When running a program, a computer uses memory and processing power. Those two are currencies for programmers.</p>
+          <p class="copy--xsmall box">A computer has two main types of memory. The disk storage, and its volatile operating memory: the Random Access Memory (RAM). The RAM is the memory that counts when writing a program. Variables, lists, and all the data the program needs to use are stored in the RAM.</p>
+          <p class="copy--xsmall box">The processor is the part of the computer that actually runs the program and executes its statements.</p>
         </section>
 
       <section>
-        <h3>Kinds of Memory - ROM</h3>
+        <h3>Why is Memory Important?</h3>
         <ul class="list--tall copy--small box--small">
-          <li><b>ROM</b> or <b>Read-only memory</b> is the more permanent kind.</li>
-          <li>ROM is used in the computer so that the processor does not have to look for important pieces of data when switched on, like the operating system.</li>
-          <li>For the most part, you cannot edit files in ROM and data on it cannot be erased by turning off your computer.</li>
+          <li>As opposed to disk space, RAM is quite expensive and RAM considerate programs save money on server costs.</li>
+          <li>Programs manipulating a lot of data can easily duplicate them and use a lot of RAM.</li>
+          <li>A program can leak memory, meaning that because of bad code, it holds on to data that is not needed anymore, taking up more and ore RAM until there is no more and the computer crashes.</li>
+          <li>Sometimes optimizing memory means adding more load to the processor.</li>
         </ul>
       </section>
-
+      
       <section>
-        <h4>Kinds of Memory - Hard-Disk Storage</h4>
+        <h3>Why is Processing Power Important?</h3>
         <ul class="list--tall copy--small box--small">
-          <li>More permanent, more long term memory.</li>
-          <li>This memory is what the computer uses to store programs and files that you create.</li>
-          <li>Examples would be the hard drive on the computer, thumb drive, or external hard drive.</li>
-        <ul>
-      </section>
-
-      <section>
-        <h3>Kinds of Memory - RAM</h3>
-        <ul class="list--tall copy--small box--small">
-          <li><b>RAM</b> or <b>Random-access memory</b> is less permanent.</li>
-          <li>RAM is the memory that the computer uses to do its "thinking" (such as when you're working on a Word document, the changes you make before you hit Save, are stored in RAM).</li>
-          <li>It hold raw data waiting to be processed as we’ll as the program instructions for processing that data</li>
-          <li>It holds the results of processing until they can be stored more permanently on disk or tape </li>
-          <li>When computer is turned off, data in RAM is gone and cannot be recovered unless it has been saved.</li>
+          <li>It's often the single most expensive resource on a server, and the limitting factor of a program's speed.</li>
+          <li>A program with a bad complexity can look fine with small sets of data and tests, and then become unusable when used with larger sets.</li>
+          <li>A powerful state of the art server might be 5 or 10 times faster than an older model, it won't make up for programms that are billions of times slower because of larger data sets.</li>
+           <li>Sometimes optimizing the complexity means storing more data in memory.</li>
         </ul>
       </section>
-
+      
       <section>
-        <h3>How does Ram Work?</h3>
+        <h3>Sample Task</h3>
+        <p>I have a bunch of guinea pigs with a mix of three colors: black, brown, and white. They can have one, a mix of two, or even all three colors. I'm curious to know how many guinea pigs show each color so I'm going to come up with the three numbers:</p>
         <ul class="list--tall copy--small box--small">
-          <li>Microscopic parts called capacitors hold bits that represent data as 1s and 0s</li>
-          <li>A RAM address helps locate data as needed for processing</li>
-          <li>RAM is volatile which means it requires electrical power to hold data</li>
+          <li>Number of guinea pigs with some black</li>
+          <li>Number of guinea pigs with some brown</li>
+          <li>Number of guinea pigs with some white</li>
         </ul>
       </section>
-
+      
       <section>
-        <h3>How does Ram Work?</h3>
-        <img src="images/RAM.png" />
-      </section>
-
-      <section>
-        <h4>Difference between RAM and Hard-Disk Storage?</h4>
-          <ul class="list--tall copy--small box--small">
-          <li> RAM is temporary storage</li>
-          <li> Hard-disk storage is more permanent </li>
-         <li> RAM has less storage capacity than hard-disk storage </li>
+        <h3>Process (pseudo code) </h3>
+        <ul class="list--tall copy--small box--small">
+          <li>grab a black, a brown, and a white post-it</li>
+          <li>for each guinea pig<ul>
+            <li>if the guinea pig has some black<ul>
+              <li>add one mark to the black post it</li>
+            </ul></li>
+            <li>if the guinea pig has some brown<ul>
+              <li>add one mark to the brown post it</li>
+            </ul></li>
+            <li>if the guinea pig has some white<ul>
+              <li>add one mark to the white post it</li>
+            </ul></li>
+          </ul></li>
+          <li>look at all three post-its when it's over for the results</li>
         </ul>
       </section>
-
 
       <section>
           <h3>Programming structures</h3>
           <ul class="list--tall copy--small box--small">
             <li>No matter what programming language you use, the structures that are available are usually fairly similar.
               <ul>
-                <li><span class="green">Variables</span></li>
+                <li>Data Types</li>
+                <li>Variables and Assignments
                 <li>Logical structures:
                   <ul>
-                    <li><span class="blue">If/Else statements</span></li>
-                    <li><span class="yellow">Loops</span></li>
+                    <li><span class="purple">Logical expressions and operators</span></li>
+                    <li><span class="green">If</span></li>
+                    <li><span class="red">Else</span></li>
+                  </ul>
+                </li>
+                <li>Loops:
+                  <ul>
+                    <li><span class="blue">For loops</span></li>
+                    <li><span class="yellow">While loops</span></li>
                   </ul>
                 </li>
               </ul>
@@ -196,6 +196,19 @@
         </section>
 
         <section>
+          <h3>Data Types</h3>
+          <p>
+            <span class="green">Data types</span> are quite literally types of data that a programming language understands and is able to manipulate. They vary from a language to another, but the following ones are vastly shared accross modern languages:
+          </p>
+          <ul>
+            <li>Integer (Natural number, like <span class="green">1</span> or <span class="green">2</span>)</li>
+            <li>Float (Number, like <span class="green">3.456</span>)</li>
+            <li>String (Text, like <span class="green">"I am a string")</span></li>
+            <li>Boolean (<span class="green">true</span> or <span class="green">false</span>)</li>
+          </ul>
+        </section>
+
+        <!--section>
           <h3>Variables</h3>
           <ul class="list--tall copy--small box--small">
             <li>A <span class="green">variable</span> is essentially a <strong>storage container for information</strong>.</li>
@@ -207,63 +220,140 @@
             </li>
             <li>There are <em>different kinds of variables</em> based on the information that you want to store.</li>
           </ul>
-        </section>
+        </section-->
 
         <section>
-          <h3>Integer Variables</h3>
-          <p class="copy--small box">Integer variables are used to store<br/>positive or negative whole <strong>numbers</strong>.</p>
-           <p class="copy--small box"><span class="blue">int data=30</span></p>
-            <ul class="list--tall copy--xsmall">
-              <li><strong>Amazon Example:</strong> number of books you can order is an integer (also the number in 'cart').</li>
-              <li>More than likely, Amazon stores this field as an integer because they’ll want to do calculations with it. If you order 2 copies of a book, the program multiplies the price by 2 to get the total cost.</li>
-              <li>Another example is in eBay. When you select something to order, the quantity is an integer. See what happens when you put in the letter 'a' or a special character like '@'.</li>
-            </ul>
+          <h3>Integers</h3>
+          <p class="copy--small box">Integer are positive or negative <strong>whole numbers</strong>.</p>
+          <p class="copy--small">Examples: <span class="green">1</span>, <span class="green">-65</span>, <span class="green">8746278467823</span></p>  
+          <ul class="copy--small">Real life examples:
+            <li>On Youtube, the number of views for a video.</li>
+            <li>On Amazon, the number of items of a given type in your cart, or how many copies of a book you want to order.</li>
+            <li>Your computer's printing utility asking you how many copies you want to print, or what page number you want to print.</li>
+            <li>The temperature on your house's air conditioning interface.</li>
+            <li>The number of likes of a post on Facebook.</li>
+          </ul>
         </section>
-
+        
         <section>
-          <h3>String Variables</h3>
-          <p class="copy--small box">String variables are used to store text.</p>
-          <p class="copy--small box"><span class="blue">String name="Bob Jones"</span></p>
-          <ul class="list--tall copy--xsmall">
-            <li><strong>Amazon Example:</strong> if you went into your profile, fields like name, address, state, and city are strings.</li>
-            <li>Usually when a string is created in the program, it's surrounded by quotation marks.</li>
+          <h3>Floats</h3>
+          <p class="copy--small box">Floats are positive or negative <strong> numbers</strong>.</p>
+          <p class="copy--small">Examples: <span class="green">3.14159</span>, <span class="green">10/3</span>, <span class="green">-0.2</span></p>
+          <ul class="copy--small">Real life examples:
+            <li>In Word, the page width in inches.</li>
+            <li>On Amazon, an item's price or your cart's total value in dollars.</li>
+            <li>Your body temperature on a digital thermometer</li>
           </ul>
         </section>
 
         <section>
-          <h3>Numbers as strings</h3>
-          <p class="copy--small box"><span class="blue">String zipcode="48070"</span></p>
-          <ul class="list--tall copy--small box">
-            <li>You <b>can</b> store a number as a string variable.</li>
-            <li>If you store a number as a string variable, you can't use it in any math calculations.
-              <ul class="copy--small">
-                <li>For example, credit card numbers are integers but you would never use them in a mathematical calculation.</li>
-                <li>Another example would be postal codes. Even though the USA uses only numbers, not all countries do. So if you make your zip code field an integer, no other country can use it except the USA.</li>
-              </ul>
-            </li>
+          <h3>Strings</h3>
+          <p class="copy--small box">Strings are <strong> text</strong> samples</p> usually represented inside quotation marks.
+          <p class="copy--small">Examples: <span class="green">"Hello World!"</span>, <span class="green">"Jane Doe"</span>, <span class="green">"123"</span></p>
+          <ul class="copy--small">Real life examples:
+            <li>On any site where you have an account, your username, email address, and password are strings.</li>
+            <li>The content of a tweet is a string.</li>
+            <li>Your computer name or WiFi network name.</li>
           </ul>
         </section>
 
         <section>
-          <h3>Boolean Variables</h3>
-          <p class="copy--small box">Boolean variables are used to store the value<br/><b>TRUE</b> or <b>FALSE</b> (yes or no).</p>
-          <p class="copy--small box"><span class="blue">boolean isLogin=true</span></p>
-          <ul class="copy--small list--tall">
-            <li>You define a condition, then use a Boolean to tell the computer whether that condition is true or false.</li>
-            <li class="copy--small">Amazon Example:
-              <ul>
-                <li>If the login equals true, your name shows up, your cart is populated, etc.</li>
-              </ul>
-            </li>
+          <h3>Booleans</h3>
+          <p class="copy--small box">Booleans can take one of the following two values: <strong>true</strong> or <strong>false</strong>.</p>
+          <p class="copy--small">Examples: well...<span class="green">true</span>, <span class="green">false</span> ;-)
+          <ul class="copy--small">Real life examples:
+            <li>On most sites where you have an account, your choice of receiving the promotions by email.</li>
+            <li>Your computer's mute state.</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>Lists</h3>
+          <p class="copy--small box">A list is an advanced type that can store multiple pieces of data, often from any type, in an <strong>ordered</strong> fashion. Lists are usually represented with square braquets, holding multiple values separated by commas.</p>
+          <p class="copy--small">Examples: <span class="green">[1, 2, 3, 4, 5]</span>, <span class="green">['one', 'two']</span>
+          <ul class="copy--small">Real life examples:
+            <li>On your phone, the list of the permissions granted to an app.</li>
+            <li>On Netflix the list of movies or shows in a given category, and the list of episodes in a show.</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>Dictionary</h3>
+          <p class="copy--small box">A dictionary is another advanced type that can store multiple pieces of data, often from any type, as <strong>key: value</strong> pairs. Dictionaries are usually represented with curly braquets, holding multiple key: value pairs separated by commas.</p>
+          <p class="copy--small">Examples: <span class="green">{firstName: "Jane", lastName: "Doe", age: 37}</span>, <span class="green">{january: 31, february: 28}</span>
+          <ul class="copy--small">Real life examples:
+            <li>Your user profile on most sites will be used by the code as a dictionary.</li>
+            <li>On Netflix the categories of shows are keys of a dictionaries, the list of shows in a category are the value.</li>
+            <li>Yes, that means there can be dictionaries of lists, and also lists of dictionaries, and it can go on and on</li>
           </ul>
         </section>
 
+        <section>
+          <h3>Variables (1/3)</h3>
+          <p class="copy--small box">A variable is a <strong>storage container</strong>. It has a name, and holds a value. The value can be any type of data.</p>
+          <p class="copy--small box">A variable needs to be declared. That's when it gets assigned a name. After being declared, it can be assigned a value. From there on, the program can use the variable's name to refer to the value that's in it.</p>
+          <pre style="height: 100px; overflow: hidden;"><code>
+            var username;
+            username = "jane123";
+            console.log(username);
+          </code></pre>
+        </section>
+        
+        <section>
+          <h3>Variables (2/3)</h3>
+          <p class="copy--small box">In most languages, variables can be declared and have a value assigned to <strong>at the same time</strong></p>
+          <pre style="height: 80px; overflow: hidden;"><code>
+            var username = "jane123";
+            console.log(username);
+          </code></pre>
+          <p class="copy--small box">Some languages won't let you store values from different data types under the same variable name. This means the type a variable can store is defined during declaration.</p>
+          <pre style="height: 80px; overflow: hidden;"><code>
+            String username = "jane123";
+            int age = 37;
+          </code></pre>
+        </section>
+        
+        <section>
+          <h3>Variables (3/3)</h3>
+          <p class="copy--small box">A variable can have its value reassinged as many times as necessary. When that happens, the previous value in the variable is lost and the variable name now refers to the new value.</p>
+          <pre style="height: 180px; overflow: hidden;"><code>
+            var username = "jane123";
+            console.log(username); // will log "jane123"
+            username = "a";
+            console.log(username); // will log "a"
+            username = 4 // this would break in a language like Java
+            console.log(username + 2) // will log 6
+          </code></pre>
+          <p class="copy--small box">You can also use a variable in its own assignment instruction:</p>
+          <pre style="height: 80px; overflow: hidden;"><code>
+            var age = 37;
+            age = age + 1; // it's someone's birthday!!!
+            console.log(age) // will log 38
+          </code></pre>
+        </section>
+        
+        <section>
+          <h3>Let's Play with Variables!</h3>
+          <ul class="copy--small list--tall box--small">
+            <li>For this excercise, we're using <b>Javascript</b>.</li>
+            <li>Go to <a href="http://repl.it/languages" target="_blank">repl.it,</a> which is an online terminal to practice writing code.</li>
+            <li>Choose 'Javascript'.</li>
+          </ul>
+          <pre class="fragment" style="height: 120px; overflow: hidden;"><code>
+            var firstName = "Jane";
+            var lastName = "Doe";
+            console.log("Jane");
+            console.log(firstName);
+          </code></pre>
+          <p class="fragment copy--small box">Feel free to try different data types!</p>
+        </section>
+        
         <section>
           <h3>Logical structures</h3>
           <ul class="list--tall copy--small box--small">
             <li>Now that you can store data, you probably want to do something with it.</li>
             <li>Logical structures provide the framework for using that data to "get stuff done".</li>
-            <li>If you understand the concepts, you can learn how to represent them in most programming languages.</li>
+            <li>If you understand the concepts, you can learn how to represent them in most programming languages (Java, PHP, Python, Ruby, Javascript, C++, C#, C, and many more).</li>
           </ul>
         </section>
 
@@ -274,7 +364,7 @@
 
             <li>A few xamples:
               <ul class="copy--small">
-                <li>= (equal to)</li>
+                <li>== (equal to, note that single = is ususally reserved for assignment)</li>
                 <li>> (greater than)</li>
                 <li>&lt; (less than)</li>
                 <li>>= (greater than or equal to)</li>
@@ -311,7 +401,7 @@
           <h3>Let's Do Some If / Then / Else!</h3>
           <ul class="fragment copy--small list--tall box--small">
             <li>For this excercise, we're using <b>Ruby</b>.</li>
-            <li>Go to <a href="http://repl.it/languages" target="_blank">repl.it,</a> which is an online terminal to practice writing code.</li>
+            <li>Go to <a href="http://repl.it/languages" target="_blank">repl.it</a>.</li>
             <li>Choose 'Ruby'.</li>
           </ul>
         </section>
@@ -378,7 +468,7 @@
           <h3>Let's Do Some Loops!</h3>
           <ul class="fragment copy--small list--tall box--small">
             <li>For this excercise, we're using Python.</li>
-            <li>Go to <a href="http://repl.it/languages" target="_blank">repl.it,</a> which is an online terminal to practice writing code.</li>
+            <li>Go to <a href="http://repl.it/languages" target="_blank">repl.it</a>.</li>
             <li>Choose 'Python'.</li>
           </ul>
         </section>
@@ -405,12 +495,20 @@
         <section>
           <img src="images/loop-illustration.png" />
         </section>
-
+        
+        <section>
+          <h3>FOR Loop Examples</h3>
+          <ul class="copy--small list--tall box--small">
+            <li>Newsletter: "FOR" each subscriber to the newsletter, send an email.</li>
+            <li>Amazon cart total: "FOR" each item in the cart, update the total to add the price of the item times the number of copies.</li>
+          </ul>
+        </section>
+        
         <section>
           <h3>WHILE Loop Examples</h3>
           <ul class="copy--small list--tall box--small">
-            <li>Amazon or eBay: "WHILE" it's today, display the daily deals.</li>
-            <li>Amazon cart: "WHILE" it's this book, display the book's image, title, price, etc.</li>
+            <li>Car alarm system when triggered: "WHILE" the engine is off, keep making noise.</li>
+            <li>Radio search for frequencies: "WHILE" there is no signal, increase the scanned frequency</li>
           </ul>
         </section>
 
@@ -426,6 +524,65 @@
             </li>
           </ul>
         </section>
+        
+        <section>
+        <h3>Back to our Guinea Pigs</h3>
+        <ul class="list--tall copy--small box--small">
+          <li>grab a black, a brown, and a white post-it</li>
+          <li>for each guinea pig<ul>
+            <li>if the guinea pig has some black<ul>
+              <li>add one mark to the black post it</li>
+            </ul></li>
+            <li>if the guinea pig has some brown<ul>
+              <li>add one mark to the brown post it</li>
+            </ul></li>
+            <li>if the guinea pig has some white<ul>
+              <li>add one mark to the white post it</li>
+            </ul></li>
+          </ul></li>
+          <li>look at all three post-its when it's over for the results</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>From Pseudo to Real Code</h3>
+        <pre style="height: 370px; overflow: hidden;"><code>
+          blackNumber = 0
+          brownNumber = 0
+          whiteNumber = 0
+          for pig in guineaPigs:
+              if pig.hasColor('black'):
+                  blackNumber = blackNumber + 1
+              if pig.hasColor('brown'):
+                  brownNumber = brownNumber + 1
+              if pig.hasColor('white'):
+                  whiteNumber = whiteNumber + 1
+          print('Number of guinea pigs with black:')
+          print(blackNumber)
+          print('Number of guinea pigs with brown:')
+          print(brownNumber)
+          print('Number of guinea pigs with white:')
+          print(whiteNumber)
+        </code></pre>
+      </section>
+      
+      <section>
+        <h3>From Pseudo to "Real Life" Code</h3>
+        <pre style="height: 300px; overflow: hidden;"><code>
+          colorCount = {
+              "black": 0,
+              "brown": 0,
+              "white": 0
+          }
+          for pig in guineaPigs:
+              for color in colorCount.keys():
+                if pig.hasColor(color):
+                  colorCount[color] ++
+          for color in colorCount.keys():
+              print('Number of guinea pigs with %s:' % color)
+              print(colorCount[color])
+        </code></pre>
+      </section>
 
         <section>
           <h3>Project Implementation Example</h3>
@@ -465,12 +622,11 @@
 
         <!-- Title -->
         <section>
-          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <img src="https://avatars0.githubusercontent.com/u/10690633?v=3&s=200" class="img--bare" height="200px" />
           <div class="box--small">
             <h3><span class="blue">Intro to Programming Concepts</span></h3>
             <h4><span class="green">For True Beginners!</span></h4>
-            <!-- TODO: fill in Your Name & @yourname, or add any other contact info you'd like! -->
-            <p class="copy--xsmall">Talia Selitsky &nbsp; | &nbsp; @Talia_Selitsky &nbsp; | &nbsp; @gdiannarbor &nbsp; | &nbsp; #gdia2</p>
+            <p>Check out our monthly hack night at http://www.meetup.com/Girl-Develop-It-Indianapolis</p>
           </div>
         </section>
 
@@ -478,7 +634,7 @@
 
       <footer>
         <div class="copyright">
-          Intro to Programming Concepts ~ GDI Ann Arbor ~
+          Intro to Programming Concepts ~ GDI Indy ~
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
