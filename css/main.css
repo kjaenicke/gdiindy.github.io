@@ -1,3 +1,11 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+p {
+	font-size: 18px;
+	line-height: 28px;
+}
 
 
 /* ==========================================================================
@@ -246,18 +254,17 @@
 }
 
 .underlined-headline hr {
-	width: 400px;
-	border-top: 2px solid #d8ae64;
-	border-bottom: 2px solid #d8ae64;
-	height: 2px;
-	margin-bottom: 20px;
-	margin-top: 0;
+    width: 600px;
+    border-top: 2px solid #d8ae64;
+    border-bottom: 2px solid #d8ae64;
+    height: 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .underlined-headline h2 {
-	text-transform: uppercase;
 	color: #282828;
-	font-weight: 300;
+	font-weight: 700;
 	text-align: center;
 	font-size: 25px;
 	margin-top: 25px;
@@ -388,9 +395,7 @@ html, body {
     cursor: pointer;
 }
 
-p {
-	font-size: 18px;
-}
+
 
 .meetup-callout {
 	text-align: center;
