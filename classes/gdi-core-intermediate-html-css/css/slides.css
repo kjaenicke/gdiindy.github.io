@@ -209,7 +209,7 @@ li.opera {
   width: 700px;
 }
 /* line 148, source/slides.css */
-.border-radius div.example {
+.border-radius .example {
   background-color: #cccccc;
   border: solid 4px black;
   height: 200px;
@@ -355,15 +355,15 @@ article.rgba-opacity .example5.rgba {
 }
 /* line 232, source/slides.css */
 .box-shadow .example1 div {
-  -webkit-box-shadow: 1px 1px red;
-  -moz-box-shadow: 1px 1px red;
-  box-shadow: 1px 1px red;
+  -webkit-box-shadow: 5px 5px red;
+  -moz-box-shadow: 5px 5px red;
+  box-shadow: 5px 5px red;
 }
 /* line 236, source/slides.css */
 .box-shadow .example2 div {
-  -webkit-box-shadow: 0 0 1px 1px red;
-  -moz-box-shadow: 0 0 1px 1px red;
-  box-shadow: 0 0 1px 1px red;
+  -webkit-box-shadow: 0 0 5px 5px red;
+  -moz-box-shadow: 0 0 5px 5px red;
+  box-shadow: 0 0 5px 5px red;
 }
 
 /******************************
@@ -661,7 +661,7 @@ article.gradients .radial-example6 {
   margin: 20px 0;
   padding: 4px;
   text-align: left;
-  width: 100px;
+  width: 125px;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
