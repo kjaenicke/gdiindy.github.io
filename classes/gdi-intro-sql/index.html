@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intro to SQL</title>
+
+		<meta name="description" content="Intro to SQL Curriculum">
+		<meta name="author" content="Girl Develop It - Indianapolis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <!-- Opening -->
+				<section>
+					<h1>Intro to SQL</h1>
+                    <img src="img/gdi_logo_badge.png" alt="GDI Logo"/>
+					<p>
+						<small>Original Created by <a href="http://hakim.se">Girl Develop It - Indianapolis</a> / <a href="http://twitter.com/gdiindy">@gdiindy</a></small>
+					</p>
+				</section>
+
+                <!--Slide 1-->
+				<section>
+					<h2>Welcome!</h2>
+                    <p>Our Website: gdiindy.github.io</p>
+                    </br>
+                    <p align ="left">The Girl Develop It Indianapolis chapter is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction</p>
+                    <ul>
+						<li class="fragment">We are here for you!</li>
+						<li class="fragment">Every question is important</li>
+						<li class="fragment">Help each other</li>
+						<li class="fragment">Have fun</li>
+					</ul>
+					
+				</section>
+            
+                <!--Slide 2-->
+                <section>
+					   <h2>What is SQL?</h2>
+                    <p>SQL (pronounced "ess-que-el") stands for Structured Query Language. SQL is used to communicate with a database. According to ANSI (American National Standards Institute), it is the standard language for relational database management systems.</p>
+					
+				</section>
+                
+                <!--Slide 3-->
+                <section>
+					   <h2>Why SQL?</h2>
+                    <p>Almost every meaningful application that exists today has a need to persist data.  One of the most tried and true ways to maintain this data is through the use of relational databases.  SQL has become an industry standard for interacting with these data stores.</p>
+					
+				</section>
+            
+                <!--Slide 4-->
+                <section>
+				    <h3>SQL fall into several functionally distinct families including:</h3>
+                    <ul>
+                        <li class="fragment">DDL (Data Definition Language) - allows the description of the basic structure: tables, views ("views"), index, attributes</li>                         
+                        <li class="fragment">DML (Data Manipulation Language) - allows the manipulation of tables and views</li>
+                        <li class="fragment">DML (Data Manipulation Language) - allows the manipulation of tables and views</li>
+                        <li class="fragment">DCL (Data Control Language) - contain primitive transaction management and data access privileges.
+                        <li class="fragment">DBMS (Database Management System) - a is the server that handles databases.</li>
+                    </ul>
+					
+				</section>
+            
+                
+                <section>
+					   <h2>Data Base Objects</h2>
+                    <p>Databases are made up of Data Base Objects.  These often come in the form of tables, views, functions, triggers and stored procedures to name a few.  Tables are the basic building blocks as they are the containers for the data and have data relationships built into them.</p>
+				</section>
+            
+                <!--Slide 4-->
+                <section>
+					<h2>Tables</h2>
+                    <p>Tables are used to organize data.  Imagine trying to find somebody in a phone book if the names were not ordered alphabetically.</p>
+				</section>
+				
+                <!--Slide 5-->
+                <section>
+					   <h2>General Data Types</h2>
+                    <p><ul>
+						<li class="fragment">CHAR - Character string. Fixed-length n</li>
+						<li class="fragment">VARCHAR - Character string. Variable length. Maximum length n</li>
+						<li class="fragment">BINARY - Binary string. Fixed-length n</li>
+						<li class="fragment">BOOLEAN - TRUE or FALSE values</li>
+						<li class="fragment">INTEGER - Integer numerical (no decimal). Precision p</li>
+						<li class="fragment">DECIMAL - Exact numerical, precision p, scale s</li>
+						<li class="fragment">DATE - Stores year, month, and day values</li>
+						<li class="fragment">TIME - Stores hour, minute, and second value</li>
+                        <li class="fragment">ARRAY - A set-length and ordered collection of elements</li>
+					</u></p>					
+				</section>
+        
+                <section>
+                    <h2>SQL Create</h2>
+                    <p>The CREATE statement is used to query data from a database.</p>
+                </section>
+            
+                 <!--Slide 6-->
+                <section>
+					<h2>SQL Create DB</h2>
+                    <pre><code>
+CREATE DATABASE GDI;
+					</code></pre>
+				</section>
+            
+                 <!--Slide 7-->
+                <section>
+					<h2>SQL Create Table</h2>
+					<pre><code>
+CREATE TABLE [dbo].[Customer]
+(
+	[CustomerID] [int] NOT NULL,
+	[FirstName] [varchar](50) NULL,
+	[LastName] [varchar](50) NULL,
+	[PhoneNumber] [varchar](50) NULL
+)
+					</code></pre>					
+				</section>
+            
+                 <!--Slide 8-->
+                <section>
+					<h2>Querying tables</h2>
+                    <p>The SELECT statement is used to query data from a database.</p>
+				</section>
+            
+                <!--Slide 9-->
+                <section>
+					<h2>SQL SELECT Syntax </h2>
+					<pre><code>
+SELECT FirstName, LastName
+FROM Customer
+					</code></pre>
+				</section>
+            
+                 <!--Slide 10-->
+                <section>
+					<h2>SQL INSERT Syntax</h2>
+					<pre style="margin-left:-225px!important"><code style="width:1425px!important">
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (1, 'Virginie', 'Adams', '317-555-1234')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (2, 'Virginie', 'Adams', '999-555-9999')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (3, 'Adam', 'Fletcher', NULL)
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (4, 'Thomas', 'Besluau', '317-555-5555')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (5, 'Abbe', 'Yale', '111-222-3333')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (6, 'Bobby', 'Wilkes', '317-555-2222')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (7, 'Michael', 'Osborn', '317-555-1111')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (8, 'Mer', 'Alialy', '317-555-1122')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (9, 'Tina', 'Fey', '317-555-9876')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (10, 'Amy', 'Poehler', '317-333-1111')
+					</code></pre>					
+				</section>
+                
+                 <section>
+                    <h2>Let's Develop It!</h2>
+                    <p>Try creating a table or two and adding data into it. To do this we will use SQLFiddle. Either type it in yourself or copy and paste the code from Exercise 1 on our website.</p>
+                </section>
+            
+        
+                 <!--Slide 11-->
+                <section>
+					<h2>SQL WHERE Syntax</h2>
+					<pre><code>
+SELECT *
+FROM Customer
+WHERE LastName = 'Fey'
+					</code></pre>						
+				</section>
+            
+                 <!--Slide 12-->
+                <section>
+					<h2>SQL LIKE Syntax</h2>
+					<pre><code>
+SELECT *
+FROM Customer
+WHERE LastName LIKE '%A%'
+					</code></pre>						
+				</section>
+            
+                <!--Slide 13-->
+                <section>
+					   <h2>SQL AND &amp; OR</h2>
+					   <pre><code>
+SELECT *
+FROM Customer
+WHERE FirstName = 'Tina'
+AND LastName = 'Fey'
+
+SELECT *
+FROM Customer
+WHERE LastName = 'Fey'
+OR LastName = 'Poehler'
+					</code></pre>												
+				</section>
+           
+		        <!--Slide 14-->
+                <section>
+					   <h2>SQL IN Syntax</h2>
+					   <pre><code>
+SELECT *
+FROM Customer
+WHERE LastName IN ('Fey', 'Poehler')
+					</code></pre>	
+				</section>
+				
+                <!--Slide 5-->
+                <section>
+					   <h2>SQL ORDER BY Syntax</h2>
+					   <pre><code>					   
+SELECT *
+FROM Customer
+ORDER BY LastName ASC, FirstName DESC
+					</code></pre>	
+				</section>
+                
+                 <section>
+                    <h2>Let's Develop It!</h2>
+                     <p> Try some of the statements above and see what you get back!</p>
+                </section>
+            
+            
+			<!--Slide 5-->
+                <section>
+					   <h2>Table Relationships</h2>
+					   <p><ul>
+							<li>The PRIMARY KEY uniquely identifies each record in a database table.</li>
+							<li>Primary keys must contain UNIQUE values.</li>
+							<li>A primary key column cannot contain NULL values.</li>
+							<li>Most tables should have a primary key, and each table can have only ONE primary key.</li>
+							<li>A FOREIGN KEY in one table points to a PRIMARY KEY in another table.</li>
+						</ul>
+						</p>
+				</section>
+		
+                <!--Slide 5-->
+                <section>
+					   <h2>Child Table</h2>
+                    <pre><code>
+CREATE TABLE [dbo].[Phone]([CustomerID] [int] NOT NULL,[PhoneNumber] [varchar](50) NULL)
+INSERT INTO Phone (CustomerID, PhoneNumber) VALUES (1, '317-555-1234')
+INSERT INTO Phone (CustomerID, PhoneNumber) VALUES (2, '999-555-9999')
+--SKIPPING Adam => PhoneNumber IS NULL
+INSERT INTO Phone (CustomerID, PhoneNumber) VALUES (4, '317-555-5555')
+INSERT INTO Phone (CustomerID, PhoneNumber) VALUES (5, '111-222-3333')
+INSERT INTO Phone (CustomerID, PhoneNumber) VALUES (6, '317-555-2222')
+INSERT INTO Phone (CustomerID, PhoneNumber) VALUES (7, '317-555-1111')
+INSERT INTO Phone (CustomerID, PhoneNumber) VALUES (8, '317-555-1122')
+INSERT INTO Phone (CustomerID, PhoneNumber) VALUES (9, '317-555-9876')
+INSERT INTO Phone (CustomerID, PhoneNumber) VALUES (10,'317-333-1111')
+					</code></pre>					
+				</section>
+    
+                <section>
+                    <h2>SQL JOINS</h2>
+                    <img src="img/SQL%20JOINS.jpg" width = "80%" alt="SQL JOINS"/>
+                </section>
+            
+                 <!--Slide 5-->
+                <section>
+					<h2>SQL INNER JOIN Syntax</h2>
+                    <pre><code>					   
+SELECT *
+FROM Customer
+INNER JOIN Phone
+ON Customer.CustomerID = Phone.CustomerID
+					</code></pre>		
+                    
+				</section>
+				
+                 <!--Slide 5-->
+                <section>
+					<h2>SQL LEFT &amp; RIGHT JOIN Syntax</h2>
+                    <pre><code>					   
+SELECT *
+FROM Customer
+LEFT JOIN Phone
+ON Customer.CustomerID = Phone.CustomerID
+
+SELECT *
+FROM Customer
+RIGHT JOIN Phone
+ON Customer.CustomerID = Phone.CustomerID
+					</code></pre>						
+				</section>
+    
+                 <section>
+                    <h2>Let's Develop It!</h2>
+                     <p>Try out some SQL Joins. Ask a TA if you want to verify your results.</p>
+                </section>
+    
+                <section>
+					<h2>Updating tables</h2>
+                    <p>The UPDATE statement is used to update data from a database.</p>
+				</section>
+            
+                
+                <!--Slide 5-->
+                <section>
+					<h2>SQL UPDATE Syntax</h3>
+                    <pre><code>					   
+UPDATE Customer
+SET LastName = 'Spaans'
+WHERE CustomerID = 5
+					</code></pre>						
+				</section>
+                
+               <section>
+					<h2>Deleting tables</h2>
+				</section>
+    
+                <!--Slide 5-->
+                <section>
+					<h2>SQL DELETE Syntax</h3>
+                    <pre><code>						
+DELETE
+FROM Phone
+WHERE CustomerID = 10
+
+DELETE
+FROM Customer
+WHERE CustomerID = 10											
+					</code></pre>						
+				</section>
+            
+                <!--Slide 5-->
+                <section>
+					<h2>SQL TRUNCATE Syntax</h3>
+                    <pre><code>						
+TRUNCATE TABLE Phone
+
+TRUNCATE TABLE Customer
+					</code></pre>					   
+				</section>
+            
+			    <!--Slide 5-->
+				<section>
+					<h2>SQL ALTER Syntax</h3>
+                    <pre><code>						
+ALTER TABLE Phone
+ADD CountryCode VARCHAR(5)
+					</code></pre>
+				</section>
+				
+                <!--Slide 5-->
+                <section>
+					   <h2>SQL DROP Syntax</h3>
+                    <pre><code>					   
+DROP TABLE Phone
+
+DROP TABLE Customer
+					</code></pre>					   
+				</section>
+    
+                <section>
+					<h1>SQL Functions</h1>
+				</section>
+
+                 <!--Slide 5-->
+                <section>
+					<h2>SQL Aggregate Functions</h2>
+					<p>SQL aggregate functions return a single value, calculated from values in a column.</p>
+					<ul>
+						<li>AVG() - Returns the average value</li>
+						<li>COUNT() - Returns the number of rows</li>
+						<li>FIRST() - Returns the first value</li>
+						<li>LAST() - Returns the last value</li>
+						<li>MAX() - Returns the largest value</li>
+						<li>MIN() - Returns the smallest value</li>
+						<li>SUM() - Returns the sum</li>
+					</ul>
+				</section>	
+				
+                 <!--Slide 5-->
+                <section>
+					<h2>SQL Scalar Functions</h2>					
+					<p>SQL scalar functions return a single value, based on the input value.</p>					
+					<ul>
+						<li>UCASE() - Converts a field to upper case</li>
+						<li>LCASE() - Converts a field to lower case</li>
+						<li>MID() - Extract characters from a text field</li>
+						<li>LEN() - Returns the length of a text field</li>
+						<li>ROUND() - Rounds a numeric field to the number of decimals specified</li>
+						<li>NOW() - Returns the current system date and time</li>
+						<li>FORMAT() - Formats how a field is to be displayed</li>
+					</ul>
+				</section>
+                    
+                <!--Slide 5-->
+                <section>
+					   <h1>Thank you!</h1>
+                       <p>This is the tip of the iceberg, please stay thirsty and continue learning.</p>
+                       <h2 class = "fragment" > Useful Resoures</h2>
+                    <ul>
+						<li class = "fragment" ><a href="http://www.w3schools.com/sql/" target="_blank">W3schools</a></li>
+						<li class = "fragment" ><a href="http://www.tutorialspoint.com/sql/" target="_blank">tutorialspoint</a></li>
+                        <li class = "fragment" ><a href="https://blogs.oracle.com/datawarehousing/entry/why_sql_is_becoming_the" target="_blank">Oracle Blog Post</a></li>
+					</ul>
+				</section>
+                
+                <!--
+				<section>
+					<h1>THE END</h1>
+					<h3>BY Girl Develop It</h3>
+					<h4>Special thanks to: Virgnie Adams</h4>
+				</section> -->
+
+			</div>
+  		<footer>
+        <div class="copyright">
+          Intro to SQL -- GDI Indy --
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

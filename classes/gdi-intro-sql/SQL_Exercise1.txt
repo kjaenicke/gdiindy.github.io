@@ -1,0 +1,18 @@
+CREATE TABLE [dbo].[Customer]
+(
+	[CustomerID] [int] NOT NULL,
+	[FirstName] [varchar](50) NULL,
+	[LastName] [varchar](50) NULL,
+	[PhoneNumber] [varchar](50) NULL
+)
+
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (1, 'Virginie', 'Adams', '317-555-1234')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (2, 'Virginie', 'Adams', '999-555-9999')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (3, 'Adam', 'Fletcher', NULL)
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (4, 'Thomas', 'Besluau', '317-555-5555')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (5, 'Abbe', 'Yale', '111-222-3333')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (6, 'Bobby', 'Wilkes', '317-555-2222')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (7, 'Michael', 'Osborn', '317-555-1111')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (8, 'Mer', 'Alialy', '317-555-1122')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (9, 'Tina', 'Fey', '317-555-9876')
+INSERT INTO Customer (CustomerID, FirstName, LastName, PhoneNumber) VALUES (10, 'Amy', 'Poehler', '317-333-1111')}
