@@ -91,8 +91,7 @@
 				    <h3>SQL fall into several functionally distinct families including:</h3>
                     <ul>
                         <li class="fragment">DDL (Data Definition Language) - allows the description of the basic structure: tables, views ("views"), index, attributes</li>                         
-                        <li class="fragment">DML (Data Manipulation Language) - allows the manipulation of tables and views</li>
-                        <li class="fragment">DML (Data Manipulation Language) - allows the manipulation of tables and views</li>
+                        <li class="fragment">DML (Data Manipulation Language) - allows the manipulation of tables and views</li>	
                         <li class="fragment">DCL (Data Control Language) - contain primitive transaction management and data access privileges.
                         <li class="fragment">DBMS (Database Management System) - a is the server that handles databases.</li>
                     </ul>
@@ -129,7 +128,7 @@
         
                 <section>
                     <h2>SQL Create</h2>
-                    <p>The CREATE statement is used to query data from a database.</p>
+                    <p>The CREATE statement is used to create objects in a database.</p>
                 </section>
             
                  <!--Slide 6-->
@@ -325,7 +324,7 @@ ON Customer.CustomerID = Phone.CustomerID
     
                 <section>
 					<h2>Updating tables</h2>
-                    <p>The UPDATE statement is used to update data from a database.</p>
+                    <p>The UPDATE statement is used to update the data in a table.</p>
 				</section>
             
                 
@@ -340,7 +339,7 @@ WHERE CustomerID = 5
 				</section>
                 
                <section>
-					<h2>Deleting tables</h2>
+					<h2>Deleting from tables</h2>
 				</section>
     
                 <!--Slide 5-->
@@ -423,7 +422,7 @@ DROP TABLE Customer
                 <!--Slide 5-->
                 <section>
 					   <h1>Thank you!</h1>
-                       <p>This is the tip of the iceberg, please stay thirsty and continue learning.</p>
+                       <p>This is the tip of the iceberg, there is so much more to learn about SQL.  Please stay curious and continue learning.</p>
                        <h2 class = "fragment" > Useful Resoures</h2>
                     <ul>
 						<li class = "fragment" ><a href="http://www.w3schools.com/sql/" target="_blank">W3schools</a></li>
@@ -453,7 +452,6 @@ DROP TABLE Customer
 		<script src="js/reveal.min.js"></script>
 
 		<script>
-
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -461,9 +459,7 @@ DROP TABLE Customer
 				progress: true,
 				history: true,
 				center: true,
-
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -475,7 +471,6 @@ DROP TABLE Customer
                     { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
-
 		</script>
 
 	</body>
