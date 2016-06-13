@@ -112,6 +112,7 @@ p {
 	font-size: 50px;
 	text-align: center;
 	padding: 115px 0;
+	text-shadow: 6px 6px 10px #333333;
 }
 
 .gdi-main .gdi-logo {
